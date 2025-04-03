@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Historical Figures Documentation</title>
+    <title>Iranian Historical Figures Documentation</title>
+    <meta
+      name="keywords"
+      content="Iranian historical figures, AI Knowledge Assistant, Persian history, Gemini AI, Streamlit, LLamaIndex"
+    />
     <meta name="author" content="Bahram Maravandi" />
     <style>
       body {
@@ -52,8 +56,8 @@
       <section>
         <h2>Introduction</h2>
         <p>
-          The Iranian historical figures application is an AI Knowledge
-          Assistant that includes a rich database of People who have made
+          The Iranian historical figures application is an <b>AI Knowledge
+          Assistant</b> that includes a rich database of People who have made
           significant contributions to Iranian culture, science, and history.
           The application provides detailed information about each figure,
           including their biography, achievements, and impact on Iranian
@@ -62,6 +66,84 @@
         <p>
           Version: 1.61<br />
           Last update: 03-04-2025
+        </p>
+        <h2>Features</h2>
+        <p>
+          The application is designed as a familiar AI chat interface, in which
+          the user could query for information about historical figures like
+          Kings, Scientists, Poets and Writers. The queries could be asked in 4
+          different categories:
+
+          <li>
+            <b>Biography:</b> Asking a question like 'Who was Saadi?' will
+            return a short biography of the person.
+          </li>
+          <li>
+            <b>Works:</b> When this category is chosen, asking a question about
+            a Person, would return his achievements and greatest contributions.
+          </li>
+          <li>
+            <b>Timeline:</b> This category would return the timeline of the
+            person, including his birth and death dates, and important events in
+            his life.
+          </li>
+          <li>
+            <b>Default:</b> This category is designed to ask any question about
+            a specific person.
+          </li>
+        </p>
+        <h2>Technical specification</h2>
+        <p>
+          The application is a Python-based web application that is using
+          <a href="https://streamlit.io/" target="_blank">Streamlit</a> as the
+          main framework.
+        </p>
+        <p>
+          <a href="https://deepmind.google/technologies/gemini/" target="_blank"
+            >Gemini</a
+          >
+          is the main AI LLM which is responsible for generating the answers
+          based on the given Iranian Historical Figures Dataset.
+        </p>
+        <p>
+          The Dataset is processed using
+          <a href="https://docs.llamaindex.ai/en/stable/" target="_blank"
+            >LLamaIndex</a
+          >
+          and is stored in a local Vector Store. It includes Person's
+          <b>Name</b>, <b>Birth Date</b> in Hijri and Gregorian Calendar,
+          <b>Birth Place</b>, his/her <b>short Biography</b> and <b>Image</b>.
+          It was created and maintained by Bahram Maravandi. It is also used in
+          the
+          <a href="https://bit.ly/jalali-calendar" target="_blank"
+            >Persian Calendar Chrome Extension</a
+          >.
+        </p>
+        <p>
+          <a
+            href="https://support.google.com/cloud/answer/15544987?hl=en&ref_topic=15540269&sjid=10910214058998478458-EU"
+            target="_blank"
+            >Google Auth Platform</a
+          >
+          is used for authentication.
+        </p>
+        <h2>How to Use</h2>
+        <p>
+          The application needs a Google Acount for authentication, please
+          contact me on X for access.
+        </p>
+        <p>
+          Once authenticated, you are able to begin asking questions about
+          historical figures.
+        </p>
+        <p>
+          After selecting a category, a randomly generated hint suggests which
+          person you might want to query about next.
+        </p>
+        <p>Scanning the QR Code, would redirect you to this page ;-)</p>
+        <p>
+          Consider starting a new chat and clearing the current conversation
+          history by clicking the New Chat button in the sidebar.
         </p>
       </section>
     </main>
