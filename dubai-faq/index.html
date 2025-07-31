@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dubai Expat Community FAQ - Dein Leitfaden für Expats in Dubai
+    </title>
+    <style>
+      /* --- Grundlegende Typografie & Layout --- */
+      body {
+        font-family: "Open Sans", Arial, sans-serif; /* Eine lesbare Schriftart */
+        line-height: 1.6;
+        color: #333; /* Dunkles Grau für den Haupttext */
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9; /* Dezenter Hintergrund */
+      }
+
+      /* Container für den gesamten Inhalt, zentriert */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px; /* Innenabstand an den Seiten */
+      }
+
+      /* --- Header Bereich --- */
+      header {
+        background-color: #004080; /* Dunkles Blau für den Header */
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+        border-bottom: 5px solid #007bff; /* Ein Akzentstreifen */
+        margin-bottom: 30px; /* Abstand zum Inhalt */
+      }
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 5px;
+      }
+      header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+
+      /* --- Hauptinhaltsbereich Layout (Flexbox für Seitenleiste und Hauptinhalt) --- */
+      .main-content {
+        display: flex;
+        gap: 30px; /* Abstand zwischen den Spalten */
+        padding-bottom: 30px;
+      }
+
+      /* --- Navigationsleiste (Inhaltsverzeichnis) --- */
+      .sidebar {
+        flex: 0 0 280px; /* Feste Breite, etwas breiter für längere Einträge */
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        align-self: flex-start; /* Bleibt oben, auch wenn der Inhalt rechts länger ist */
+        position: sticky; /* Bleibt beim Scrollen sichtbar */
+        top: 20px; /* Abstand vom oberen Rand */
+      }
+      .sidebar h2 {
+        color: #004080;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin-bottom: 8px;
+      }
+      .sidebar ul li a {
+        display: block; /* Damit der ganze Bereich klickbar ist */
+        padding: 10px 15px;
+        background-color: #f2f7ff; /* Helles Blau für die Links */
+        color: #0056b3;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: flex; /* Für Icon und Text */
+        align-items: center;
+        font-weight: 500;
+      }
+      .sidebar ul li a:hover,
+      .sidebar ul li a.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+      /* Optional: Icon-Styling für Sidebar Links (Platzhalter) */
+      .sidebar ul li a .icon {
+        margin-right: 10px;
+        /* Beispiel für Font Awesome Icon: <i class="fas fa-money-bill-wave icon"></i> */
+      }
+
+      /* --- Inhaltsbereich (Rechts) --- */
+      .content-area {
+        flex-grow: 1; /* Nimmt den restlichen Platz ein */
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Kategorietitel (z.B. Allgemeine Fragen und Ratschläge) */
+      .content-area h2 {
+        color: #004080;
+        font-size: 2em;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+      }
+
+      /* --- Akkordeon-Styling (für jede Frage-Antwort-Sektion) --- */
+      .accordion-item {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .accordion-question {
+        background-color: #e9f5ff; /* Helles Blau für die Frage */
+        padding: 15px 20px;
+        font-size: 1.15em;
+        font-weight: bold;
+        color: #0056b3;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+      .accordion-question:hover {
+        background-color: #dbeaff;
+      }
+      .accordion-question .toggle-icon {
+        font-size: 1.2em;
+        transition: transform 0.3s ease;
+      }
+      .accordion-question.active .toggle-icon {
+        transform: rotate(90deg); /* Pfeil drehen */
+      }
+
+      .accordion-answer {
+        padding: 15px 20px;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        display: none; /* Standardmäßig ausgeblendet durch JS */
+      }
+      .accordion-answer p {
+        margin-bottom: 10px;
+      }
+      .accordion-answer ul {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+      }
+      .accordion-answer ul li {
+        margin-bottom: 5px;
+      }
+
+      /* --- Zitat-Styling für spezielle Antworten (z.B. die von Marc Schippke) --- */
+      blockquote {
+        background-color: #f0f0f0;
+        border-left: 5px solid #ccc;
+        padding: 10px 15px;
+        margin: 15px 0;
+        font-style: italic;
+        color: #555;
+      }
+
+      /* --- Links im Text --- */
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* --- Footer Bereich --- */
+      footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        background-color: #333;
+        color: #fff;
+        font-size: 0.9em;
+      }
+      footer a {
+        color: #aaccff;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* --- Responsive Design (für kleinere Bildschirme) --- */
+      @media (max-width: 900px) {
+        /* Anpassung für mittlere Bildschirme */
+        .main-content {
+          flex-direction: column; /* Spalten untereinander anordnen */
+        }
+        .sidebar {
+          flex: auto; /* Nimmt volle Breite ein */
+          margin-bottom: 20px;
+          position: static; /* Sticky deaktivieren */
+        }
+        header h1 {
+          font-size: 2em;
+        }
+        .content-area {
+          padding: 20px; /* Etwas weniger Padding auf kleinen Bildschirmen */
+        }
+      }
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.8em;
+        }
+        header p {
+          font-size: 1em;
+        }
+        .content-area h2 {
+          font-size: 1.6em;
+        }
+        .accordion-question {
+          font-size: 1em;
+          padding: 12px 15px;
+        }
+        .accordion-answer {
+          padding: 12px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dubai Expat Community FAQ</h1>
+      <p>Dein Leitfaden für Expats in Dubai</p>
+    </header>
+
+    <div class="container">
+      <div class="main-content">
+        <nav class="sidebar">
+          <h2>Inhaltsverzeichnis</h2>
+          <ul>
+            <li>
+              <a href="#einleitung" class="nav-link"
+                ><span class="icon">&#x1F4DD;</span> Einleitung</a
+              >
+            </li>
+            <li>
+              <a href="#allgemeine-fragen-und-ratschlaege" class="nav-link"
+                ><span class="icon">&#x1F4AD;</span> Allgemeine Fragen und
+                Ratschläge</a
+              >
+            </li>
+            <li>
+              <a href="#banken-und-finanzen" class="nav-link"
+                ><span class="icon">&#x1F4B8;</span> Banken und Finanzen</a
+              >
+            </li>
+            <li>
+              <a href="#bildung" class="nav-link"
+                ><span class="icon">&#x1F393;</span> Bildung</a
+              >
+            </li>
+            <li>
+              <a href="#gesundheit-und-wohlbefinden" class="nav-link"
+                ><span class="icon">&#x1F48A;</span> Gesundheit und
+                Wohlbefinden</a
+              >
+            </li>
+            <li>
+              <a href="#immobilien-und-miete" class="nav-link"
+                ><span class="icon">&#x1F3E2;</span> Immobilien und Miete</a
+              >
+            </li>
+            <li>
+              <a href="#lebensmittel" class="nav-link"
+                ><span class="icon">&#x1F34E;</span> Lebensmittel</a
+              >
+            </li>
+            <li>
+              <a href="#recht-und-datenschutz" class="nav-link"
+                ><span class="icon">&#x2696;&#xFE0F;</span> Recht &
+                Datenschutz</a
+              >
+            </li>
+            <li>
+              <a href="#restaurants-und-cafe" class="nav-link"
+                ><span class="icon">&#x1F374;</span> Restaurants und Cafés</a
+              >
+            </li>
+            <li>
+              <a href="#umzug-und-transport" class="nav-link"
+                ><span class="icon">&#x1F697;</span> Umzug und Transport</a
+              >
+            </li>
+            <li>
+              <a href="#versicherung" class="nav-link"
+                ><span class="icon">&#x1F4B3;</span> Versicherung</a
+              >
+            </li>
+            <li>
+              <a href="#visum-und-einreise" class="nav-link"
+                ><span class="icon">&#x1F30E;</span> Visum und Einreise</a
+              >
+            </li>
+            <li>
+              <a href="#kontakte" class="nav-link"
+                ><span class="icon">&#x1F4DE;</span> Kontakte</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="content-area">
+          <section id="einleitung" style="margin-bottom: 30px">
+            <h2>Einleitung</h2>
+            <p>Hallo zusammen!</p>
+            <p>
+              Für alle, die planen, nach Dubai auszuwandern oder bereits hier
+              leben, habe ich die wichtigsten Fragen und Antworten aus dem
+              WhatsApp-Chat mit THE NETZWERK I Dubai - UAE und Ado Dubai
+              Community 🎙️🇦🇪 zusammengetragen. Hier findet ihr hilfreiche Tipps
+              und Ratschläge zu verschiedenen Themen rund um das Leben in Dubai.
+              <br /><br />Stand: 12. Juni - 31. Juli 2025
+              <br />
+            </p>
+            <p style="margin-top: 20px; color: #888; font-size: 0.98em">
+              Dieses FAQ wurde mithilfe einer KI erstellt und basiert auf den
+              zum Zeitpunkt der Generierung verfügbaren Informationen. Ich freue
+              mich über Ihr Feedback! <br />
+              <a href="https://linktr.ee/bahix">Bahram</a>
+            </p>
+          </section>
+
+          <section>
+            <h2 id="allgemeine-fragen-und-ratschlaege">
+              Allgemeine Fragen und Ratschläge
+            </h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie kann ich Black Points auf meinem Führerschein vermeiden,
+                wenn ich mit dem Handy am Steuer geblitzt werde? Welche Blitzer
+                erfassen dies und sollte ich es bei der Polizei prüfen lassen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Handy weglegen. Es gibt Saugnäpfe fürs Handy dann einfach mit
+                  navi ans armaturenbrett. Kurze Anmerkung: falls du einen
+                  Unfall machst und schuld bist und dabei jemand im Koma liegt,
+                  bleibst du im Knast, bis der wieder aufwacht, ohne Verhör. Und
+                  die Versicherung kann sich weigern, die Schäden zu zahlen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hey zusammen, kennt sich jemand hier in Communities mit
+                Nachbarschaftsstreitereien aus? Was kann man in so einem Fall
+                machen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Der Nachbar kann überhaupt nichts tun! Vielleicht mit ihm
+                  reden und sagen, wir versuchen unser bestes, aber es sind halt
+                  Kinder! Polizei macht eigentlich nichts, außer er macht etwas.
+                  Sag der Security, die sollen nicht mehr kommen, wenn der
+                  Nachbar sich wegen Kinder beschwert.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Was denkt ihr, macht mehr Sinn: Ich habe zwei Maxi-Cosi
+                Kindersitze in Deutschland. Diese mitnehmen oder in Dubai neue
+                kaufen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Zählt als extra Gepäckstücke und extra Kilo. Musst schauen,
+                  was mehr Sinn macht. Ich persönlich habe neue gekauft und die
+                  in Deutschland gelassen, weil man doch immer mal dahin fliegt
+                  und nutzen kann oder auf eBay Kleinanzeigen noch Geld bekommt.
+                  Wir unser Kindersitz fürs Auto und Isofix als Extragepäck
+                  kostenfrei mitgenommen. Sobald ein Baby dabei ist, geht das
+                  (zumindest bei Emirates).
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Weiß jemand, wie man einen Laden in der Dubai Mall bekommt?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ruf 800 38224 6255 an oder schreib eine email an
+                  "enquiry@thedubaimall.com". Ich kenne einen Maklerfreund, der
+                  da gute Kontakte hat. Aber mach dir 3 Mal über dein Konzept
+                  und deine Lage Gedanken. Die Dubai Mall akzeptiert auch nicht
+                  jeden. Entweder super geile neue Ideen, ansonsten große Marken
+                  oder Namen, die bereits schon mehrere Standorte nachweisen
+                  können. Vorher musst du ein Profil fertig erstellen und dann
+                  das erst vorstellen, bevor du überhaupt eine Fläche angeboten
+                  bekommst.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Weiß jemand, wie streng die in Downtown (also Dubai Mall und
+                Burj) sind, wenn es darum geht, dass Frauen freizügig bekleidet
+                rausgehen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Interessiert niemanden. Was ich so an Nacktheit in Dubai
+                  gesehen habe, siehst du nicht in Deutschland.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wo ist denn in Dubai ein US-Stützpunkt?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ja, es gibt US-Stützpunkte in den Vereinigten Arabischen
+                  Emiraten (VAE). Ein wichtiger Stützpunkt ist die Al Dhafra Air
+                  Base in Abu Dhabi, die gemeinsam von den VAE und den USA
+                  genutzt wird. Dort sind etwa 5.000 US-Militärpersonal
+                  stationiert. Die Basis dient als wichtiger Knotenpunkt für
+                  gemeinsame Militärübungen und Operationen.<br />Weitere
+                  Details zu den US-Stützpunkten in den VAE:<br />*
+                  <b>Al Dhafra Air Base</b>: Gemeinsame Nutzung durch VAE und
+                  USA, Stationierung von etwa 5.000 US-Militärpersonal,
+                  Durchführung von gemeinsamen Militärübungen und Operationen<br />*
+                  <b>Jebel Ali Port in Dubai</b>: Wichtigster Hafen für die US
+                  Navy im Nahen Osten, Zahlreiche US-Marineschiffe besuchen den
+                  Hafen<br />Die militärische Zusammenarbeit zwischen den VAE
+                  und den USA umfasst auch gemeinsame Operationen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Was darf eine Agentur für administrative Angelegenheiten zur
+                Auswanderung (Single, Firmengründung, Check-up) kosten?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Es wird empfohlen, für die Firmengründung eine Agentur zu
+                  nutzen, da der Prozess komplex sein kann.
+                  "Smartstartdubai.com" wird für professionelle Beratung
+                  empfohlen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Welche sind die besten Jobplattformen in den VAE?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Die am häufigsten empfohlenen Jobplattformen sind Bayt,
+                  LinkedIn und Indeed.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Erfahrungen beim Recruiting von lokalen Arbeitskräften (IT,
+                Junior-Level)? Gibt es gute Arbeitskräfte, typische
+                Jobplattformen und durchschnittliche Gehälter?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  LinkedIn ist die Top-Empfehlung und kostengünstig. Eine
+                  Stellenanzeige kann 200-1000 Bewerbungen generieren, die sich
+                  gut durch gezielte Fragen filtern lassen. Gezielte Fragen
+                  können effektiv filtern. Eine Stellenanzeige kostet ca. 250
+                  Dirham pro Tag. Informationen zu Durchschnittsgehältern wurden
+                  nicht bereitgestellt.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Gibt es eigentlich Möglichkeiten, bis auf die kostenlose
+                Simkarte, die man am Flughafen bekommt, an eine UAE-Nummer zu
+                kommen? z.B. eSIM?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://www.etisalat.ae/en/c/mobile/esim.html"
+                    >z.B. etisalat</a
+                  >
+                  (e&) Einfach App installieren und registrieren.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Suche sowas ähnliches wie in Deutschland Bauhaus, gibt es sowas
+                hier in Dubai oder Sharjah wenn ja wie heist der Laden?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>ACE, Dragon Mart</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlung für Auto Auktion in Dubai
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://www.copartmea.com/">Copart</a><br />
+                  <a href="https://www.emiratesauction.com/">Emirates Auction</a
+                  ><br />
+                  <a href="https://www.rta.ae/wps/portal/rta/ae/home/auction"
+                    >Dubizzle</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hat jemand eine Empfehlung für einen Beachclub mit schönem
+                Poolbereich mit Kleinkind in Dubai?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  One and only Mirage<br />
+                  Atlantis The Palm White Beach<br />
+                  Mandarin oriental Jumeirah
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlung für Haushaltsreinigungskräfte in Dubai?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://wa.me/971565865588"
+                    >The CLEAN Fox - German Quality Cleaning Services</a
+                  ><br />
+                  Careem Cleaning Services<br />
+                  Justlife
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hat jemand eine Empfehlung für einen guten Handwerker (Handyman
+                Services) in Dubai?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://fixpluscare.ae/">Fix Plus Care</a>
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hat jemand eine Empfehlung für einen guten männer Friseur Salon
+                in Dubai?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://maps.app.goo.gl/ZernkmGmBUC5xJF56"
+                    >German Cut</a
+                  >
+                  in Al Ghurair Centre - Deira <br />
+                  oder <a href="https://shayv.com/">Shayv</a> the mobile Salon
+                  kontaktieren.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="banken-und-finanzen">Banken und Finanzen</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Kennt jemand die Bank Liv.me?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Liv ist die Online-Version der ENBD.<br />
+                  Banken wie Mashreq, FAB oder Maria Bank sind auch schnell und
+                  easy.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wieso gibt es eigentlich keine Suchfunktion bei WIO?
+                (Finanz-App)
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Doch klar. Startseite -> scroll runter -> Transaktionen -> See
+                  All. Suchleiste und Filter. Handy oder Laptop? Handy. Laptop
+                  geht nicht, Google Suchfunktion geht auch nicht, der erkennt
+                  eiskalt den Text nicht. Kontoauszug, dann über die PDF-Suche?
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Eine Stiftung in Dubai gründen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <blockquote>
+                  <a href="https://wa.me/4917680160794">Marc Schippke</a> wird
+                  als Kontakt für Informationen zur Gründung einer Stiftung in
+                  Dubai genannt und ausdrücklich empfohlen, da er "Zugang und
+                  Wege hat, die kaum jemand hat".
+                </blockquote>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie kann man Geld auf die WIO-Karte laden?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Das geht bei der nächsten Wechselstube (Exchange).</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hat jemand einen Kontakt für EmiratesNBD oder macht man das
+                online?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Direkte Kommunikation mit dem Management wird empfohlen. Es
+                  gibt Andeutungen, dass eine private Kommunikation hier der
+                  beste Weg ist.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Welche Kreditkarte könnt ihr empfehlen? Gibt es eine
+                Vergleichliste?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <ul>
+                  <li>
+                    FAB Cashback Credit Card: 5% Cashback auf
+                    Supermärkte/Lebensmittel Restaurants/Gastronomie Mode Tanken
+                    Schulgebühren, mindestgehalt 5k AED
+                  </li>
+                  <li>
+                    Mashreq Cashback Credit Card: Konstant gutes Cashback auf
+                    breite Ausgaben, Stark für Autofahrer 5% tanken
+                  </li>
+                  <li>
+                    HSBC Cashback Credit Card: Bis zu 10% Cashback ohne
+                    Jahresgebühr, mindestgehalt: 10k AED
+                  </li>
+                  <li>
+                    Emirates Islamic Skywards Black Credit Card, mindestgehalt:
+                    35k AED
+                  </li>
+                </ul>
+                <p>Zusammenfassung bei 25k / Monat:</p>
+                <ul>
+                  <li>
+                    ADCB Traveller: 250 - 350 AED Cashback, Reisen Hotels Flüge
+                  </li>
+                  <li>
+                    Mashreq Cashback: 200 - 300 AED Cashback, Fuell Grocery
+                  </li>
+                  <li>HSDC Cashback: bis 500 AED , Alltag kein luxus nötig</li>
+                  <li>
+                    Emirates Islamic Signature: 10.000 + Meilen, Emirates
+                    Vielflieger
+                  </li>
+                  <li>Liv Cashback: 200 - 300 AED, Junge Digitaler Nutzer</li>
+                </ul>
+                <p>
+                  Es wird immer empfohlen, das Dokument "Gebühren- und
+                  Entgeltübersicht" für die spezifische Cashback Kreditkarte, an
+                  der Sie interessiert sind, sorgfältig zu prüfen, da sich die
+                  Geschäftsbedingungen, einschließlich Gebühren und
+                  Cashback-Obergrenzen, ändern können.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Was ist eine Instant Kreditkarte?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Eine Instant Kreditkarte ist eine Kreditkarte, die sofort nach
+                  der Genehmigung des Antrags ausgestellt wird. Sie kann in der
+                  Regel direkt über eine App oder Online-Banking genutzt werden,
+                  ohne dass eine physische Karte erforderlich ist. Dies
+                  ermöglicht es den Nutzern, sofort auf ihre Kreditlinie
+                  zuzugreifen und Einkäufe zu tätigen.<br />Hier eine aktuelle
+                  liste:
+                  <a
+                    href="https://insurancemarket.ae/banking/top-instant-credit-cards-in-dubai-and-the-uae/"
+                  >
+                    Top Instant Credit Cards in Dubai and the UAE</a
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="bildung">Bildung</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Gute Sprachschule in Dubai für einen zweiwöchigen Intensivkurs
+                zur Verbesserung des Englisch B2-Niveaus, eventuell kombinierbar
+                mit Bildungsurlaub.
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  "Preply" wird zum Lernen von überall vorgeschlagen. Ein
+                  Nutzer, der einen einwöchigen A1-Kurs an einer ungenannten
+                  Schule besuchte, fand eine Woche zu kurz, aber zwei Wochen
+                  könnten besser sein. "English Path Dubai", "EC English
+                  Language Schools" und "LISA! Sprachreisen" werden als weitere
+                  Alternativen genannt, die für Bildungsurlaub in Frage kommen
+                  könnten.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Gibt es in Dubai eine gute deutsche Schule, die auch das Abitur
+                anbietet?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ja, die
+                  <a href="https://germanschool.ae"
+                    >Deutsche Internationale Schule Dubai</a
+                  >
+                  (DISD) bietet das Abitur an. Sie ist eine der ältesten
+                  deutschen Schulen in Dubai und bietet eine umfassende
+                  Ausbildung in deutscher Sprache.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlung für gute Online Sprachkurs für Kinder?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://www.novakidschool.com/">Novakid</a> ist eine
+                  gute Empfehlung für Online-Sprachkurse für Kinder. Es bietet
+                  interaktive Lerninhalte und Spiele, die das Lernen von
+                  Englisch unterhaltsam und effektiv machen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie melde ich mein Kind für den Schulbus an?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Es wird empfohlen, dass man sich vor dem Umzug nach Dubai mit
+                  dem Anbieter STS-Bus in Kontakt setzt, da dieser nicht jede
+                  Region in Dubai befährt,<br />
+                  E-mail: sde-disd@stss.ae<br />
+                  Tel : +0971 (0) 505221360.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="gesundheit-und-wohlbefinden">
+              Gesundheit und Wohlbefinden
+            </h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie lange sollte man NAD+ einnehmen und welche Auswirkungen
+                hätte eine Absetzung der Produkte?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  NAD+ ist ab 30 Jahren sehr wichtig. Am effektivsten sind
+                  intravenöse IV-Therapien, die in Dubai angeboten werden (ca.
+                  2x monatlich, 60-90 Min., 200-400 €/Monat). Ergänzend können
+                  Kreatin und L-Tyrosin sinnvoll sein. Vitamine und Mineralien
+                  sollte man nur nach einem Body-Check supplementieren, aber
+                  Schwefel und Zink sind wichtig. Immer ärztlichen Rat einholen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wo kann man in Dubai Protein Pulver kaufen, mit guter
+                Preisleistung? (Leistung = Werte und Geschmack)
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Myprotein liefert mittlerweile auch in die VAE.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Welche Kinderarztpraxis in Dubai ist zu empfehlen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Dr. Philipp Mirbach ist sehr gut. Er ist Hausarzt und
+                  Kinderarzt. Er hat eine Praxis in Dubai Marina.
+                  <a href="https://www.smartsalem.ae/team">Smart Salem</a>
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hausarzt Empfehlung in Sharjah?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Christian Heidenreich ist ein sehr guter Hausarzt in Sharjah.
+                  <a href="https://german-medical-clinic.com/team/"
+                    >German Medical Centre</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Kennt jemand einen Zahnprothesen Hersteller in den UAE
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  (In der Konversation wurde kein direkter Kontakt in den VAE
+                  genannt. Es wurde lediglich ein guter Zahnarzt/Chirurg in
+                  Tiflis, Georgien, erwähnt, falls dies auch eine Option wäre.
+                  Es wurde klargestellt, dass nur ein Hersteller für
+                  Keramikprothesen gesucht wird und keine Behandlung.)
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Ärzte, Zahnärzte und medizinische Einrichtungen in Dubai und den
+                nördlichen Emiraten?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://uae.diplo.de/ae-de/service/2647220-2647220"
+                    >KOOPERATIONSÄRZTE DES DEUTSCHEN GENERALKONSULATS</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wo in Dubai bekommt man Nahrungsergänzungsmittel?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Bestell bei Amazon.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="immobilien-und-miete">Immobilien und Miete</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie wird die Chelsea Residenz von Damac in der Maritime City als
+                Investitionsmöglichkeit eingeschätzt? Ist eine Investition dort
+                empfehlenswert oder sollte man eher davon absehen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Damac ist kein Top-Developer. Binghatti ist ähnliche
+                  Preisliga, hat besseres Finishing und Terminpläne werden
+                  besser eingehalten. Damac's Qualität ist nicht gut und haben
+                  öfters Verspätungen. Dafür ist Damac in manchen Projekten
+                  günstig, dementsprechend die Qualität etc. Alles ist besser
+                  als was Damac abliefert. Dann eher Binghatti oder MAG… Azizi…
+                  alles fast die selbe Preisklasse, aber in der Qualität Welten
+                  unterschiedlich. Statistisch gesehen gehört Damac zu den TOP
+                  DEVELOPERN, die man am ehesten und meisten kernsanieren oder
+                  renovieren lässt. Damac ist halt BILLIG, deswegen sind die
+                  immer vergriffen. Die haben einfach tatsächlich das beste
+                  Marketing und gute Broschüren. Mehr auch nicht.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Betreffend einer renovierten Immobilie: Wann erfolgte der Kauf
+                der Immobilie und wie hoch waren die Nebenkosten des Erwerbs?
+                Mit welchem Prozentsatz des Kaufpreises sollte man hierbei in
+                der Regel rechnen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Der Immobilie wurde letztes Jahr gekauft, 4 Monate
+                  kernsaniert, seit Januar in Vermietung.<br />Preise in AED pro
+                  Monat: 500 Strom, 300 Internet, 800 Service Charge, 150 AC.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie heißt nochmal der Laden in Sharjah, der wie Dragon Mart ist,
+                aber günstiger?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Ajman China Mall. Ist an der Grenze zu Sharjah.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Ist ein Off-Plan-Angebot für ein Studio in Arjan (43 qm, 820.000
+                AED, The Central Downtown, Übergabe 2028) ein guter Deal?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Die Lage und der Masterplan sind gut, aber der Preis ist,
+                  besonders für eine stornierte Einheit, zu hoch. Für 100.000
+                  AED mehr bekommt man eine 1-Zimmer-Wohnung von ca. 900 sqft.
+                  Auch in Dubai Land kann man für diesen Preis eine
+                  1-Zimmer-Wohnung finden.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Ist es normal, dass der Eigentümer der Wohnung bei der
+                Vertragsunterschrift nicht dabei ist?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Ja, das ist in Dubai ganz normal.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Welche Dokumente benötigt der Vermieter/Makler für die
+                Vertragsunterzeichnung einer Mietwohnung, und was ist bei
+                Kindern zu beachten, die nur mit einem Elternteil in den
+                Emiraten leben werden?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Für den Mietvertrag werden eine Passkopie, Emirates ID (oder
+                  der Antrag darauf) und ein Scheckheft (für die Mietzahlung)
+                  benötigt. Für Kinder, die nur mit einem Elternteil umziehen,
+                  sind zusätzlich eine notariell beglaubigte Zustimmung des
+                  anderen Elternteils (nicht immer erforderlich), eine
+                  übersetzte und beglaubigte Geburtsurkunde und eventuell ein
+                  Sorgerechtsnachweis nötig. Das Kind benötigt auch ein eigenes
+                  Visum, das vom Elternteil gesponsert werden muss.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Bester Bauträger in Dubai bezüglich Bauqualität oder
+                Wertstabilität (Damac Hills 2)?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Die Bauqualität einiger Immobilien in Damac Hills 2 wird als
+                  "erschreckend schlecht" beschrieben. Es wird empfohlen, nur
+                  "Single Row"-Häuser oder Neubauten in Betracht zu ziehen,
+                  obwohl Neubaupreise hoch sind. Damac wird nicht als der beste
+                  Bauträger in Bezug auf Bauqualität oder Wertstabilität
+                  angesehen. Nachbarn berichteten von "sehr großen Schäden" bei
+                  Regen. Dubai Hills wird als Alternative genannt, die Preise
+                  sind dort jedoch "eskaliert". Für das Home Office ist Damac
+                  Hills 2 in Ordnung, aber nicht für tägliche Pendelfahrten zur
+                  Business Bay während der Stoßzeiten.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="lebensmittel">Lebensmittel</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlungen für Lebensmittelgeschäfte in Dubai und Einkäufe?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Carrefour, Spinneys, Lulu, Choithrams, Union Coop, Al Maya,
+                  Waitrose, Geant, Al Adil (indische Lebensmittel), Al Ain
+                  (arabische Lebensmittel), Al Madina (arabische Lebensmittel),
+                  Fresh Bazaar (persische Lebensmittel).
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Könnte man Lebensmittel online bestellen und liefern lassen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ja, es gibt viele Online-Lebensmittelgeschäfte in Dubai, die
+                  eine Lieferung anbieten. Einige beliebte Optionen sind
+                  Carrefour Online, Lulu Hypermarket Online, Spinneys Online und
+                  Talabat Mart. Die meisten kleinere Supermärkte bieten auch
+                  eine Bestellung und Lieferung per WhatsApp an.<br />Z. B.
+                  <a href="https://wa.me/971504567731">Fresh Bazaar</a>,
+                  <a href="https://wa.me/971523404200">Mirjalili</a>
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Kennst du ein deutsche Bäckerei in Dubai, die gutes Brot macht?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ja,
+                  <a href="https://maps.app.goo.gl/F5WnnRWgAVJAAie26"
+                    >Scarlet´s German Bakery & Patisserie Citywalk</a
+                  >
+                  ist eine deutsche Bäckerei, die gutes Brot macht. Sie haben
+                  auch andere deutsche Backwaren im Angebot.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Gibt es in Dubai einen guten türkischen Metzger?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ja,
+                  <a href="https://maps.app.goo.gl/xEcVsLUFQyhBkU7f9"
+                    >Butcher Emre</a
+                  >
+                  in Jumeirah 1 ist ein.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Gibt es in Dubai Großmärkte für Lebensmittel?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Es gibt
+                  <a href="https://maps.app.goo.gl/mRmwz8E7yvfbeTgJ8"
+                    >Fischmarkt</a
+                  >
+                  in Deira.<br />
+                  <a href="https://maps.app.goo.gl/cJaEpPEZxF7ZSe6SA"
+                    >Al Aweer Market</a
+                  >
+                  und
+                  <a href="https://maps.app.goo.gl/meVVnEmW8VmKuWsx7"
+                    >Bloom Market</a
+                  >
+                  in Ras al Khor.<br />
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="umzug-und-transport">Umzug und Transport</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Hey, weiß jemand, wie ich am besten Pakete nach Deutschland
+                versende? Beziehungsweise möchte jemand auch gerade was nach
+                Deutschland schicken? Als Palette.
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Mit AMAREX, UPS oder DHL.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Kennt jemand ein Umzugsunternehmen von Düsseldorf nach Dubai?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="#thomas_busse">Thomas Buse DXB</a> bringt Paletten,
+                  Container usw. hierher.<br />Für Düsseldorf:
+                  <a href="https://www.acpdus.com/kontakt/">ACP</a>
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Ok, aber was ist mit Zusammenpacken usw.?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Packen habe ich selber gemacht. Abholung der Paletten zu deren
+                  Lager in D war nochmal extra, ich glaube, so 300-400€.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Container und so?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>Ich habe mit denen 6 Paletten hergebracht, 1700€.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlung für die Anmietung eines Lamborghini für einen Tag?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Ja,
+                  <a href="https://friendscarrental.com/">Friends Car Rental</a
+                  >, da der Eigentümer persönlich bekannt ist. Die Miete eines
+                  Lamborghini Huracan kostet etwa 3000 AED pro Tag.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="recht-und-datenschutz">Recht & Datenschutz</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Ich suche einen guten Anwalt für einen Vertrag.
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://mjlaw.co/">Majid Aljassim</a>: +971 52 666
+                  7777
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Datenschutzgesetze in Dubai
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Datenschutz ist offiziell reguliert, wird aber eher locker
+                  gehandhabt; tatsächliche Strafen oder Kontrollen sind selten.
+                  In einigen Freizonen (wie DIFC oder ADGM) ist es strenger.
+                  Wenn Geschäfte mit Europa getätigt werden, ist ein
+                  EU-Datenschutzbeauftragter erforderlich. Unerlaubte
+                  Kaltakquise (Cold Calling) kann zu sehr hohen Strafen von der
+                  TDRA führen.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="restaurants-und-cafe">Restaurants und Cafés</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlungen für gute arabische Restaurants in Dubai mit
+                Lieferung?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://maps.app.goo.gl/TGWj9RNpLJjwwS3k7"
+                    >Mama'esh</a
+                  >
+                  und <br />
+                  <a href="https://maps.app.goo.gl/P7X3zVb3VepMH5pH6"
+                    >RAWABI AL SHAM</a
+                  >
+                  bzw <br />
+                  <a href="https://maps.app.goo.gl/p1Hw3tBFfqsW3xbGA"
+                    >Al Beiruti</a
+                  >
+                  für die levantinische Küche und <br />
+                  <a hreef="https://maps.app.goo.gl/bE2D5fRaTctjQRYT9"
+                    >Arabian Tea House Restaurant & Cafe
+                  </a>
+                  für die einheimische Küche.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlung für ein gute Shisha Lounge in Dubai?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://maps.app.goo.gl/Hgk2hCVxJuDGy3YX6">HuQQA</a>
+                  in Dubai Mall<br />
+                  <a href="https://maps.app.goo.gl/Tz92RWkmQDfbXUd17"
+                    >Shisheo Lounge</a
+                  >
+                  in Marina Walk<br />
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlungen für gute persische Restaurants in Dubai mit
+                Lieferung?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <a href="https://maps.app.goo.gl/Es8Na5wwPV6KhjYj9">Rivas</a>
+                  in Jumeirah street<br />
+                  <a href="https://maps.app.goo.gl/Tti8mBmNygJziRRJ7"
+                    >Yashar Palace</a
+                  >
+                  in Jumeirah 1<br />
+                  <a href="https://maps.app.goo.gl/hUC13rUrYA569qKF9"
+                    >Iran Zamin</a
+                  >
+                  in der Dubai Marina
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Gute Cafés in der Dubai Mall?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>% Arabica, Peet's Coffee, Eataly und Café Bateel</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="versicherung">Versicherung</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Sollte man für eine Mietwohnung in Dubai eine
+                Hausratversicherung oder eine Versicherung für Schäden in der
+                Wohnung abschließen?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Es scheint in Dubai wesentlich weniger üblich zu sein als in
+                  Deutschland. Viele Nutzer haben keine Hausratversicherung.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Habt ihr Kontakte für eine gute internationale
+                Krankenversicherung?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Melde dich bei <a href="#tayfun_duelger">Tayfun Dülger</a>. Er
+                  ist registrierter deutscher Versicherungsmakler und kann dich
+                  beraten und betreuen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Empfehlungen für Versicherungsfirma in Dubai (Auto,
+                Krankenversicherung usw.)?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  In der Regel hat das Autohaus die Versicherungen.
+                  <a href="https://www.livainsurance.ae/">Liva</a> wird
+                  empfohlen, oder
+                  <a href="https://www.sukoon.com/">Sukoon</a> für allgemeine
+                  Versicherungen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Welche Versicherung wäre die billigste DHA-konforme?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  DHA-konformes Visum kostet 300€ im Jahr. Hier sind Beispiele:
+                  <a
+                    href="https://www.sukoon.com/individuals/health-insurance/plans/dha-ebp-plans"
+                    >Sukoon</a
+                  >
+                  oder
+                  <a
+                    href="https://www.dni.ae/personal-insurance/medical/dha_ebp/"
+                    >DNI</a
+                  >. Du kannst auch hier schauen und vergleichen:
+                  <a href="https://www.insurancemarket.ae/"
+                    >Insurancemarket.ae</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="visum-und-einreise">Visum und Einreise</h2>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Informationen zum 90-Tage-Visum
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  <b>📌 Inside 90 Days:</b><br />
+                  • 1.000 AED – Deposit<br />
+                  • 1.425 AED – Visa<br />
+                  • 650 AED – Statusänderung
+                </p>
+                <p>
+                  <b>📌 Outside 90 Days:</b><br />
+                  • 1.000 AED – Deposit<br />
+                  • 754 AED – Visa
+                </p>
+                <p>
+                  <b>Kosten bei Überschreitung:</b><br />
+                  • Zusätzlich: 50 AED pro Tag Verspätungsgebühr
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Wie beantrage ich eine Emirates ID (einschließlich Visum,
+                ärztliche Untersuchung usw.) und gibt es Kontakte für
+                Unterstützung?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Für professionelle Beratung und Unterstützung werden
+                  <a href="https://Dubaiwithroji.com">Dubaiwithroji.com</a> und
+                  <a href="https://smartstartdubai.com">smartstartdubai.com</a>
+                  empfohlen. Man könnte das auch selber direkt im
+                  <a href="https://amer247.com/online-services"
+                    >Amer Center in Dubai</a
+                  >
+                  machen.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Was ist mit "Inside oder outside" bei der Antragstellung
+                gemeint?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Das bedeutet, ob man sich aktuell im Land (VAE) befindet oder
+                  nicht.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-question">
+                Golden Visa in Dubai: Alles selbst organisieren oder lieber über
+                einen Agenten?
+                <span class="toggle-icon">&#x25B8;</span>
+              </div>
+              <div class="accordion-answer">
+                <p>
+                  Eine gute Beratung bietet Sicherheit und kann teure Fehler
+                  vermeiden. Ein anderer Nutzer meint jedoch, dass man es
+                  komplett selbst machen kann, ohne jemandem Geld zu geben, und
+                  dass es "einfach" ist, wenn man einen "Maus Führerschein" hat
+                  (was wohl bedeutet, dass man gut mit Online-Dokumenten und
+                  Bürokratie umgehen kann).
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 id="kontakte">Kontakte</h2>
+            <ul class="contact-list">
+              <li>
+                <strong>Adil Iskander</strong><br />
+                Retailer Diamond Jewellery & High End Watches.<br />
+                Rolex , Patek , AP, RM, And more <br />
+                Jewellery Manufacturing Factory <br />
+                Repairing, Service and Restoration of Watches<br />
+                <a href="https://wa.me/971553333126"
+                  >https://wa.me/971553333126</a
+                >
+              </li>
+              <li>
+                <strong>Alliph Legal Translation Services</strong><br />
+                Alliph team is committed to providing the world’s most
+                innovative and advanced language and technology solutions for
+                global business. <br />
+                We undertake legal translations on an urgent basis in 130+
+                languages. Free quote & open 24/7!<br />
+                <a href="https://wa.me/971568084898"
+                  >https://wa.me/971568084898</a
+                >
+              </li>
+              <li>
+                <strong>Al Salam Gas</strong><br />
+                <a href="https://wa.me/971554353244"
+                  >https://wa.me/971554353244</a
+                >
+              </li>
+              <li>
+                <strong>BILAL (ENBD)</strong><br />
+                <a href="https://wa.me/971522217595"
+                  >https://wa.me/971522217595</a
+                >
+              </li>
+              <li>
+                <strong>DEWA</strong><br />
+                DEWA is introducing the Rammas Virtual Agent via WhatsApp - a
+                24/7 secure and simple way for getting answers to all your
+                on-demand electricity & water enquires.<br />
+                <a href="https://wa.me/97146019999"
+                  >https://wa.me/971526667777</a
+                >
+              </li>
+              <li>
+                <strong>Haidar - Sharjah (Elektriker)</strong><br />
+                <a href="https://wa.me/491704112265"
+                  >https://wa.me/491704112265</a
+                >
+              </li>
+              <li>
+                <strong>Haidy Karam</strong><br />
+                Best price , full insurance , third party , fastest and
+                cheapest<br />
+                <a href="https://wa.me/971569974887"
+                  >https://wa.me/971569974887</a
+                >
+              </li>
+              <li>
+                <strong
+                  >Huseen (Abo Abdoo) Mercedes Garage (KFZ Mechaniker)</strong
+                ><br />
+                <a href="https://wa.me/971505868652"
+                  >https://wa.me/971505868652</a
+                >
+              </li>
+              <li>
+                <strong>Joseph Lawyer</strong><br />
+                <a href="https://wa.me/971526903588"
+                  >https://wa.me/971526903588</a
+                >
+              </li>
+              <li>
+                <strong>Majid Aljassim (Anwalt)</strong><br />
+                <a hre="https://mjlaw.co/">https://mjlaw.co/</a><br />
+                <a href="https://wa.me/971526667777"
+                  >https://wa.me/971526667777</a
+                >
+              </li>
+              <li>
+                <strong>Pangaea Cargo (Thomas Buse DXB)</strong><br />
+                <a id="thomas_busse" href="https://wa.me/491721515720"
+                  >https://wa.me/491721515720</a
+                >
+              </li>
+              <li>
+                <strong>Sven Reincke Insurance 🇦🇪</strong><br />
+                <a href="https://wa.me/971507752941"
+                  >https://wa.me/971507752941</a
+                >
+              </li>
+              <li>
+                <strong>Tayfun Dülger (Versicherungsmakler)</strong><br />
+                <a id="tayfun_duelger" href="https://wa.me/971553465531"
+                  >https://wa.me/971553465531</a
+                >
+              </li>
+              <li>
+                <strong>The CLEAN Fox - German Quality Cleaning Services</strong
+                ><br />
+                <a href="https://wa.me/971565865588"
+                  >https://wa.me/971565865588</a
+                >
+              </li>
+              <li>
+                <strong>Uwe Hohmann (Steuerkanzlei)</strong><br />
+                <a href="https://tso.tax/tso-steuerkanzleien/dubai"
+                  >TME Services</a
+                ><br />
+                <a href="https://wa.me/971555511018"
+                  >https://wa.me/971555511018</a
+                >
+              </li>
+              <li>
+                <strong>Wiktoria Wroblewska (Immobilien)</strong><br />
+                Al Barari | Tilal Al Ghaf | Victory Heights<br />
+                <a href="https://www.linkedin.com/in/wiktoria-wroblewska/"
+                  >Linkedin Profile</a
+                ><br />
+                <a href="https://wa.me/971585072314"
+                  >https://wa.me/971585072314</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Dubai Expat Community. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+      // JavaScript für Akkordeon-Funktionalität
+      document.querySelectorAll(".accordion-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const accordionItem = button.closest(".accordion-item");
+          const answer = button.nextElementSibling;
+
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+            button.classList.remove("active");
+          } else {
+            // Optional: Alle anderen Akkordeons schließen, wenn ein neues geöffnet wird
+            document
+              .querySelectorAll(".accordion-answer")
+              .forEach((openAnswer) => {
+                if (openAnswer !== answer) {
+                  openAnswer.style.display = "none";
+                  openAnswer.previousElementSibling.classList.remove("active");
+                }
+              });
+            answer.style.display = "block";
+            button.classList.add("active");
+          }
+        });
+      });
+
+      // JavaScript für aktive Navigationslinks beim Scrollen
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (
+            pageYOffset >= sectionTop - 50 &&
+            pageYOffset < sectionTop + sectionHeight - 50
+          ) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.href.includes(current)) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Initialisierung beim Laden der Seite (falls ein Hash in der URL ist)
+      document.addEventListener("DOMContentLoaded", () => {
+        const hash = window.location.hash;
+        if (hash) {
+          const targetSection = document.querySelector(hash);
+          if (targetSection) {
+            // Öffne das entsprechende Akkordeon, falls es eine Frage ist
+            const questionInTarget = targetSection.querySelector(
+              ".accordion-question"
+            );
+            if (questionInTarget) {
+              questionInTarget.click(); // Simuliert Klick, um Akkordeon zu öffnen
+            }
+            // Scrolle zur Sektion (mit einem kleinen Offset)
+            setTimeout(() => {
+              window.scrollTo({
+                top: targetSection.offsetTop - 70, // Offset für den Sticky Header/Sidebar
+                behavior: "smooth",
+              });
+            }, 100); // Kleine Verzögerung, damit Akkordeon sich zuerst öffnet
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
