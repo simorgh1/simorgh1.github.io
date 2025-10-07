@@ -1,17 +1,811 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=./calendar/index.html" />
-    <script>
-      window.location.href = "./calendar/index.html";
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bahram Mehdi Maravandi - Senior Engineering Manager & AI/ML Innovator
+    </title>
+    <meta
+      name="description"
+      content="Senior Engineering Manager with 25+ years of experience leading global engineering organizations and driving AI/LLM innovation. Expert in cloud-native architectures, distributed systems, and modern AI/ML approaches."
+    />
+    <meta
+      name="keywords"
+      content="Senior Engineering Manager, AI/ML, Cloud Architecture, Leadership, Software Engineering, Persian Calendar, Historical Figures AI"
+    />
+    <meta name="author" content="Bahram Mehdi Maravandi" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background: linear-gradient(135deg, #4a90e2 0%, #006994 100%);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto 30px;
+        border: 6px solid rgba(255, 255, 255, 0.2);
+        display: block;
+      }
+
+      .header-content h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-weight: 300;
+      }
+
+      .header-content .subtitle {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        margin-bottom: 20px;
+      }
+
+      .header-content .location {
+        font-size: 1.1rem;
+        opacity: 0.8;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      section:nth-child(even) {
+        background-color: white;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #2c3e50;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(135deg, #4a90e2 0%, #006994 100%);
+        display: block;
+        margin: 20px auto 0;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .about-highlights {
+        background: linear-gradient(135deg, #4a90e2 0%, #006994 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .about-highlights h3 {
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .about-highlights ul {
+        list-style: none;
+      }
+
+      .about-highlights li {
+        padding: 5px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .about-highlights li::before {
+        content: "▶";
+        position: absolute;
+        left: 0;
+        color: #fff;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .skill-category {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .skill-category:hover {
+        transform: translateY(-5px);
+      }
+
+      .skill-category h3 {
+        color: #2e86ab;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill-tag {
+        background: #f1f3f4;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: #555;
+        border: 1px solid #e0e0e0;
+      }
+
+      .experience-timeline {
+        position: relative;
+        margin: 50px 0;
+      }
+
+      .experience-timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(135deg, #4a90e2 0%, #006994 100%);
+        transform: translateX(-50%);
+      }
+
+      .experience-item {
+        position: relative;
+        margin: 40px 0;
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 45%;
+      }
+
+      .experience-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .experience-item:nth-child(even) {
+        left: 55%;
+      }
+
+      .experience-item::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        width: 20px;
+        height: 20px;
+        background: #006994;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 0 2px #006994;
+      }
+
+      .experience-item:nth-child(odd)::before {
+        right: -60px;
+      }
+
+      .experience-item:nth-child(even)::before {
+        left: -60px;
+      }
+
+      .experience-item h3 {
+        color: #2e86ab;
+        margin-bottom: 10px;
+      }
+
+      .experience-item .company {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .experience-item .period {
+        color: #7f8c8d;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project-content {
+        padding: 30px;
+      }
+
+      .project-content h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .project-status {
+        display: inline-block;
+        background: #27ae60;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+      }
+
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 20px 0;
+      }
+
+      .tech-tag {
+        background: #006994;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+      }
+
+      .project-links {
+        margin-top: 20px;
+      }
+
+      .project-link {
+        display: inline-block;
+        color: #2e86ab;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: 500;
+      }
+
+      .project-link:hover {
+        text-decoration: underline;
+      }
+
+      .contact-content {
+        text-align: center;
+        background: white;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #2e86ab;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .contact-link:hover {
+        color: #4a90e2;
+      }
+
+      footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .publications {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+      }
+
+      .publications h3 {
+        color: #2e86ab;
+        margin-bottom: 20px;
+      }
+
+      .publications a {
+        color: #2e86ab;
+        text-decoration: none;
+        display: block;
+        margin: 10px 0;
+      }
+
+      .publications a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .header-content h1 {
+          font-size: 2rem;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .experience-timeline::before {
+          left: 20px;
+        }
+
+        .experience-item {
+          width: calc(100% - 60px);
+          left: 60px !important;
+        }
+
+        .experience-item::before {
+          left: -50px !important;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-links {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>
-      If you are not redirected automatically, please
-      <a href="./calendar/index.html">click here</a>.
-    </p>
+    <header>
+      <div class="container">
+        <img
+          src="https://avatars.githubusercontent.com/u/5792905?v=4"
+          alt="Bahram Mehdi Maravandi"
+          class="profile-img"
+        />
+        <div class="header-content">
+          <h1>Bahram Mehdi Maravandi</h1>
+          <p class="subtitle">Senior Engineering Manager & AI/ML Innovator</p>
+          <p class="location">📍 Berlin, Germany</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I am a Senior Engineering Manager with 25+ years of experience
+              leading global engineering organizations and driving AI/LLM
+              innovation since 2022. My expertise spans cloud-native
+              architectures (AWS, Azure), distributed systems, and modern AI/ML
+              approaches including LLMs, NLP, and agentic AI frameworks.
+            </p>
+
+            <p>
+              As an outcome-driven leader, I set strategy via OKRs, improve
+              delivery with DORA metrics, and guide cross-functional squads of
+              backend, frontend, and ML engineers. I'm experienced in
+              customer-facing AI adoption and deployment discussions.
+            </p>
+
+            <p>
+              Beyond my professional life, I am a devoted father and husband, an
+              avid scuba diver, a curious food-taster exploring global cuisines,
+              and a passionate world traveler who has visited 35+ countries,
+              each journey enriching my perspective on technology and leadership
+              in a global context.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <h3>Key Achievements</h3>
+            <ul>
+              <li>
+                Transformed engineering culture to value/outcome orientation
+              </li>
+              <li>Increased deployment velocity by ~200%</li>
+              <li>Reduced delivery lead times by ~40%</li>
+              <li>Cut production defects by ~40%</li>
+              <li>Built platforms serving 60K+ operations</li>
+              <li>Leading AI/ML innovation since 2022</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>AI/ML & Data Science</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">LLMs (OpenAI, Gemini)</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">LlamaIndex</span>
+              <span class="skill-tag">HuggingFace</span>
+              <span class="skill-tag">NLP</span>
+              <span class="skill-tag">Transformers</span>
+              <span class="skill-tag">Embeddings</span>
+              <span class="skill-tag">Semantic Search</span>
+              <span class="skill-tag">RAG Architectures</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">FAISS</span>
+              <span class="skill-tag">MLOps</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & Cloud</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Distributed Systems</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Frontend & Leadership</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">OKRs</span>
+              <span class="skill-tag">DORA Metrics</span>
+              <span class="skill-tag">Agile/XP</span>
+              <span class="skill-tag">TDD</span>
+              <span class="skill-tag">Team Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <h3>Senior Engineering Manager - AI/ML</h3>
+            <div class="company">KPIT | Berlin, Germany</div>
+            <div class="period">Jan 2021 - Present</div>
+            <p>
+              Lead multifunctional squads of backend, frontend, and ML engineers
+              in building AI/LLM & cloud-native solutions. Defined and executed
+              AI roadmap, initiated RAG-based knowledgebase project. Established
+              engineering excellence practices with OKR framework and DORA
+              metrics.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Senior Software Engineering Manager</h3>
+            <div class="company">Smart House Media GmbH | Berlin, Germany</div>
+            <div class="period">Nov 2014 - Dec 2020</div>
+            <p>
+              Led engineering team for content management platform serving
+              enterprise clients. Drove technical vision and architecture
+              decisions for multi-tenant platform transformation.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Software Engineering Manager</h3>
+            <div class="company">Unisys | Vienna, Austria</div>
+            <div class="period">Oct 2011 - Oct 2014</div>
+            <p>
+              Led ERP digital transformation for government client, cutting
+              processing time by 70% and reducing approval delays by 40%.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Software Engineering Manager</h3>
+            <div class="company">Greentube I.E.S. AG | Vienna, Austria</div>
+            <div class="period">Aug 2008 - Sep 2011</div>
+            <p>
+              Integrated MySQL-based ad management features into 3D gaming
+              platform, boosting in-game monetization revenue by 45-60%.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Senior Software Engineer</h3>
+            <div class="company">bwin | Vienna, Austria</div>
+            <div class="period">Feb 2001 - Jun 2005</div>
+            <p>
+              Built comprehensive CX and CRM tools from scratch that became the
+              cornerstone of Marketing and Customer Support departments.
+              Established and scaled the development team from 1 to 9 engineers.
+              The platform served 1M+ user queries and feedback, integrated with
+              custom-built newsletter infrastructure including mass mailer,
+              bounce processor, and multilingual content management system for
+              marketing campaigns. Improved customer feedback loops by 80% and
+              reduced ticket resolution time by 65%.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Software Engineer</h3>
+            <div class="company">Eurest | Vienna, Austria</div>
+            <div class="period">Jun 1996 - Jan 2001</div>
+            <p>
+              Developed a comprehensive ERP application from scratch including
+              Cash Book, Delivery Notes, Invoicing, Inventory Management,
+              Operations Control Sheet, and Monthly Closing. This automated
+              monthly accounting integration for 65+ kitchen units enabled
+              scaling from 30 to 65+ sites and boosted revenue by 200%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="historical-figures/ka-main.png"
+              alt="AI Knowledge Assistant - Historical Figures"
+              class="project-image"
+            />
+            <div class="project-content">
+              <h3>AI Knowledge Assistant - Historical Figures</h3>
+              <span class="project-status">🚀 Production - 6+ Months</span>
+              <p>
+                A comprehensive AI-powered knowledge assistant specializing in
+                Iranian historical figures including Kings, Scientists, Poets,
+                and Writers. Features advanced RAG architecture with multiple
+                query categories and timeline generation.
+              </p>
+
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Gemini AI</span>
+                <span class="tech-tag">LlamaIndex</span>
+                <span class="tech-tag">Vector Store</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">Google Auth</span>
+                <span class="tech-tag">Microsoft Entra</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://ka.bahilabs.com/"
+                  target="_blank"
+                  class="project-link"
+                  >🌐 Live Demo</a
+                >
+                <a href="historical-figures/index.html" class="project-link"
+                  >📋 Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="calendar/media/en/main.png"
+              alt="Persian Jalali Calendar Extension"
+              class="project-image"
+            />
+            <div class="project-content">
+              <h3>Persian Jalali Calendar Chrome Extension</h3>
+              <span class="project-status">🌟 18+ Years Active</span>
+              <p>
+                A JavaScript-based Chrome/Edge extension providing Jalali
+                (Persian) Calendar with multi-calendar conversion capabilities,
+                event listings, and support for multiple languages. Serving
+                users since 2006.
+              </p>
+
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Chrome Extension</span>
+                <span class="tech-tag">Calendar APIs</span>
+                <span class="tech-tag">Multi-language</span>
+                <span class="tech-tag">Date Conversion</span>
+                <span class="tech-tag">Persian/Farsi</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://bit.ly/jalali-calendar"
+                  target="_blank"
+                  class="project-link"
+                  >🌐 Chrome Store</a
+                >
+                <a href="calendar/index_en.html" class="project-link"
+                  >📋 Details (EN)</a
+                >
+                <a href="calendar/index_fa.html" class="project-link"
+                  >📋 Details (FA)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education & Certifications</h2>
+        <div class="publications">
+          <h3>🎓 Academic Background</h3>
+          <p><strong>Bachelor of Computer Science</strong> - TU Vienna</p>
+          <p><strong>AWS Certified Solution Architect - Associate</strong></p>
+          <br />
+          <h3>🗺️ Languages</h3>
+          <p><strong>English, German:</strong> Fluent</p>
+          <p><strong>Persian:</strong> Native</p>
+          <p><strong>Arabic, Turkish:</strong> Basic</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <h2 class="section-title">Publications & Open Source</h2>
+        <div class="publications">
+          <h3>📝 Engineering Leadership Articles</h3>
+          <a href="https://medium.com/@bahram.maravandi" target="_blank"
+            >Engineering Culture & Leadership Articles on Medium</a
+          >
+          <p>
+            Sharing insights on engineering management, AI/ML implementation,
+            and building high-performing teams.
+          </p>
+          <br />
+          <h3>💻 Open Source Contributions</h3>
+          <a href="https://github.com/simorgh1" target="_blank"
+            >GitHub Repository - simorgh1</a
+          >
+          <p>
+            Open source projects including calendar systems, AI tools, and
+            engineering utilities.
+          </p>
+          <br />
+          <h3>🌍 Mozilla Firefox Localization</h3>
+          <p>
+            <strong
+              >Complete Farsi (Persian) Localization of Firefox Browser</strong
+            >
+          </p>
+          <p>
+            Contributed to Mozilla's internationalization efforts by providing
+            complete Farsi translation of Firefox browser interface,
+            encompassing 6000+ words and sentences. This contribution enabled
+            Persian-speaking users worldwide to access Firefox in their native
+            language, enhancing digital accessibility and inclusion for the
+            Persian-speaking community.
+          </p>
+          <a
+            href="https://bahiland1.blogspot.com/search/label/%D8%AA%D8%B1%D8%AC%D9%85%D9%87"
+            target="_blank"
+            >Read detailed blog posts about the localization process</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+          <p>
+            I'm always interested in discussing new opportunities, AI/ML
+            innovations, or engineering leadership challenges.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:bahi@hey.com" class="contact-link">
+              📧 bahi@hey.com
+            </a>
+            <a
+              href="https://linkedin.com/in/bahrammaravandi"
+              target="_blank"
+              class="contact-link"
+            >
+              💼 LinkedIn
+            </a>
+            <a
+              href="https://github.com/simorgh1"
+              target="_blank"
+              class="contact-link"
+            >
+              💻 GitHub
+            </a>
+            <a
+              href="https://medium.com/@bahram.maravandi"
+              target="_blank"
+              class="contact-link"
+            >
+              📝 Medium
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Bahram Mehdi Maravandi. All rights reserved. | Senior
+          Engineering Manager & AI/ML Innovator
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
