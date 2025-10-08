@@ -823,6 +823,178 @@
         transform: translateY(-1px);
         color: #006994;
       }
+
+      /* Business CTA Section Styles */
+      .business-cta {
+        background: linear-gradient(135deg, #4a90e2 0%, #006994 100%);
+        color: white;
+        padding: 60px 0;
+      }
+
+      .business-cta-container {
+        text-align: center;
+      }
+
+      .business-cta-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 300;
+      }
+
+      .business-cta-description {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .business-cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
+      .business-cta-primary {
+        background: white;
+        color: #006994;
+        padding: 15px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .business-cta-secondary {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* Services Section Styles */
+      .services-intro {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 50px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Service CTA Styles */
+      .service-cta {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        background: rgba(46, 134, 171, 0.1);
+        border-radius: 10px;
+      }
+
+      .service-cta-text {
+        margin-bottom: 15px;
+        color: #2e86ab;
+        font-weight: 600;
+      }
+
+      .service-cta-button {
+        display: inline-block;
+        background: #2e86ab;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .service-cta-button:hover {
+        background: #006994;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Engagement Models Section */
+      .engagement-models {
+        background: rgba(46, 134, 171, 0.05);
+        padding: 60px 0;
+      }
+
+      .engagement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .engagement-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .engagement-card h3 {
+        color: #2e86ab;
+        margin-bottom: 15px;
+      }
+
+      .engagement-card p {
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .engagement-card ul {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Project Features */
+      .project-features {
+        margin: 20px 0;
+        padding: 15px;
+        background: rgba(74, 144, 226, 0.1);
+        border-radius: 8px;
+      }
+
+      .project-features strong {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .project-features ul {
+        margin: 10px 0 0 20px;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .business-cta-title {
+          font-size: 2rem;
+        }
+
+        .business-cta-description {
+          font-size: 1.1rem;
+        }
+
+        .business-cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .engagement-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -925,72 +1097,24 @@
       </div>
     </section>
 
-    <section
-      id="business-cta"
-      style="
-        background: linear-gradient(135deg, #4a90e2 0%, #006994 100%);
-        color: white;
-        padding: 60px 0;
-      "
-    >
-      <div class="container" style="text-align: center">
-        <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-weight: 300">
+    <!-- Business CTA Section: Call-to-action encouraging visitors to engage with AI services -->
+    <section id="business-cta" class="business-cta">
+      <div class="container business-cta-container">
+        <h2 class="business-cta-title">
           Reduce Risk & Accelerate ROI with Enterprise AI
         </h2>
-        <p
-          style="
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-          "
-        >
+        <p class="business-cta-description">
           <strong>End-to-End Implementation:</strong> From strategy and
           architecture to deployment and governance. Reduce operational costs by
           40-60%, mitigate compliance risks, and achieve scalable integration
           with existing enterprise systems. Full project ownership with ongoing
           support and maintenance.
         </p>
-        <div
-          style="
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
-          "
-        >
-          <a
-            href="#services"
-            style="
-              background: white;
-              color: #006994;
-              padding: 15px 30px;
-              border-radius: 25px;
-              text-decoration: none;
-              font-weight: 600;
-              transition: all 0.3s ease;
-              display: inline-block;
-            "
-          >
+        <div class="business-cta-buttons">
+          <a href="#services" class="business-cta-primary">
             View AI Services
           </a>
-          <a
-            href="#contact"
-            style="
-              background: rgba(255, 255, 255, 0.2);
-              color: white;
-              padding: 15px 30px;
-              border-radius: 25px;
-              text-decoration: none;
-              font-weight: 600;
-              transition: all 0.3s ease;
-              display: inline-block;
-              border: 2px solid rgba(255, 255, 255, 0.3);
-            "
-          >
+          <a href="#contact" class="business-cta-secondary">
             Start a Conversation
           </a>
         </div>
@@ -1060,18 +1184,9 @@
         <div class="back-to-top">
           <a href="#top" class="back-to-top-link">↑ Back to Top</a>
         </div>
+        <!-- Services Portfolio: Enterprise-focused AI solutions with business outcomes -->
         <h2 class="section-title">Enterprise AI Solutions Portfolio</h2>
-        <p
-          style="
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-          "
-        >
+        <p class="services-intro">
           Mitigate operational risk and accelerate digital transformation with
           proven AI solutions. Each engagement delivers quantifiable ROI through
           reduced costs, enhanced security, improved compliance, and scalable
@@ -1196,35 +1311,19 @@
               </div>
             </div>
 
-            <!-- Service CTA -->
-            <div
-              style="
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                background: rgba(46, 134, 171, 0.1);
-                border-radius: 10px;
-              "
-            >
-              <p style="margin-bottom: 15px; color: #2e86ab; font-weight: 600">
+            <!-- Service CTA: Direct call-to-action for AI knowledgebase solution -->
+            <div class="service-cta">
+              <p class="service-cta-text">
                 Ready to reduce your support costs by 60-80% with an AI
                 knowledgebase?
               </p>
               <a
                 href="https://zcal.co/bahi"
                 target="_blank"
-                style="
-                  display: inline-block;
-                  background: #2e86ab;
-                  color: white;
-                  padding: 12px 25px;
-                  border-radius: 25px;
-                  text-decoration: none;
-                  font-weight: 600;
-                  transition: all 0.3s ease;
-                "
-                >📅 Book Strategy Session</a
+                class="service-cta-button"
               >
+                📅 Book Strategy Session
+              </a>
             </div>
           </div>
 
@@ -1332,35 +1431,19 @@
               </div>
             </div>
 
-            <!-- Service CTA -->
-            <div
-              style="
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                background: rgba(46, 134, 171, 0.1);
-                border-radius: 10px;
-              "
-            >
-              <p style="margin-bottom: 15px; color: #2e86ab; font-weight: 600">
+            <!-- Service CTA: Call-to-action for image restoration services -->
+            <div class="service-cta">
+              <p class="service-cta-text">
                 Want to preserve your historical assets and reduce processing
                 costs by 70%?
               </p>
               <a
                 href="https://zcal.co/bahi"
                 target="_blank"
-                style="
-                  display: inline-block;
-                  background: #2e86ab;
-                  color: white;
-                  padding: 12px 25px;
-                  border-radius: 25px;
-                  text-decoration: none;
-                  font-weight: 600;
-                  transition: all 0.3s ease;
-                "
-                >📅 Discuss Your Project</a
+                class="service-cta-button"
               >
+                📅 Discuss Your Project
+              </a>
             </div>
           </div>
 
@@ -1463,35 +1546,19 @@
               </div>
             </div>
 
-            <!-- Service CTA -->
-            <div
-              style="
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                background: rgba(46, 134, 171, 0.1);
-                border-radius: 10px;
-              "
-            >
-              <p style="margin-bottom: 15px; color: #2e86ab; font-weight: 600">
+            <!-- Service CTA: Call-to-action for chat summarization services -->
+            <div class="service-cta">
+              <p class="service-cta-text">
                 Have valuable conversations that need to be organized into
                 searchable knowledge?
               </p>
               <a
                 href="https://zcal.co/bahi"
                 target="_blank"
-                style="
-                  display: inline-block;
-                  background: #2e86ab;
-                  color: white;
-                  padding: 12px 25px;
-                  border-radius: 25px;
-                  text-decoration: none;
-                  font-weight: 600;
-                  transition: all 0.3s ease;
-                "
-                >📅 Explore the Possibilities</a
+                class="service-cta-button"
               >
+                📅 Explore the Possibilities
+              </a>
             </div>
           </div>
 
@@ -1608,35 +1675,19 @@
               </div>
             </div>
 
-            <!-- Service CTA -->
-            <div
-              style="
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                background: rgba(46, 134, 171, 0.1);
-                border-radius: 10px;
-              "
-            >
-              <p style="margin-bottom: 15px; color: #2e86ab; font-weight: 600">
+            <!-- Service CTA: Call-to-action for data processing and search platforms -->
+            <div class="service-cta">
+              <p class="service-cta-text">
                 Need to transform unstructured data into intelligent search
                 platforms?
               </p>
               <a
                 href="https://zcal.co/bahi"
                 target="_blank"
-                style="
-                  display: inline-block;
-                  background: #2e86ab;
-                  color: white;
-                  padding: 12px 25px;
-                  border-radius: 25px;
-                  text-decoration: none;
-                  font-weight: 600;
-                  transition: all 0.3s ease;
-                "
-                >📅 Discuss Your Data Challenge</a
+                class="service-cta-button"
               >
+                📅 Discuss Your Data Challenge
+              </a>
             </div>
           </div>
 
@@ -1731,34 +1782,18 @@
               </div>
             </div>
 
-            <!-- Service CTA -->
-            <div
-              style="
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                background: rgba(46, 134, 171, 0.1);
-                border-radius: 10px;
-              "
-            >
-              <p style="margin-bottom: 15px; color: #2e86ab; font-weight: 600">
+            <!-- Service CTA: Call-to-action for intelligent automation solutions -->
+            <div class="service-cta">
+              <p class="service-cta-text">
                 Ready to build intelligent automation for your industry?
               </p>
               <a
                 href="https://zcal.co/bahi"
                 target="_blank"
-                style="
-                  display: inline-block;
-                  background: #2e86ab;
-                  color: white;
-                  padding: 12px 25px;
-                  border-radius: 25px;
-                  text-decoration: none;
-                  font-weight: 600;
-                  transition: all 0.3s ease;
-                "
-                >📅 Book Consultation</a
+                class="service-cta-button"
               >
+                📅 Book Consultation
+              </a>
             </div>
           </div>
 
@@ -1854,35 +1889,19 @@
               </div>
             </div>
 
-            <!-- Service CTA -->
-            <div
-              style="
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                background: rgba(46, 134, 171, 0.1);
-                border-radius: 10px;
-              "
-            >
-              <p style="margin-bottom: 15px; color: #2e86ab; font-weight: 600">
+            <!-- Service CTA: Call-to-action for digital asset protection and analytics -->
+            <div class="service-cta">
+              <p class="service-cta-text">
                 Looking to protect and analyze your digital assets with
                 AI-powered solutions?
               </p>
               <a
                 href="https://zcal.co/bahi"
                 target="_blank"
-                style="
-                  display: inline-block;
-                  background: #2e86ab;
-                  color: white;
-                  padding: 12px 25px;
-                  border-radius: 25px;
-                  text-decoration: none;
-                  font-weight: 600;
-                  transition: all 0.3s ease;
-                "
-                >📅 Schedule Discovery Call</a
+                class="service-cta-button"
               >
+                📅 Schedule Discovery Call
+              </a>
             </div>
           </div>
         </div>
@@ -1990,36 +2009,18 @@
       </div>
     </section>
 
-    <section
-      id="engagement-model"
-      style="background: rgba(46, 134, 171, 0.05); padding: 60px 0"
-    >
+    <!-- Engagement Models: Different service delivery approaches for enterprise clients -->
+    <section id="engagement-model" class="engagement-models">
       <div class="container">
         <h2 class="section-title">Enterprise Engagement Models</h2>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-          "
-        >
-          <div
-            style="
-              background: white;
-              padding: 30px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            "
-          >
-            <h3 style="color: #2e86ab; margin-bottom: 15px">
-              🎯 End-to-End Implementation
-            </h3>
-            <p style="margin-bottom: 15px">
+        <div class="engagement-grid">
+          <div class="engagement-card">
+            <h3>🎯 End-to-End Implementation</h3>
+            <p>
               <strong>Full Project Ownership:</strong> Strategy, architecture,
               development, deployment, training, and ongoing maintenance.
             </p>
-            <ul style="color: #666; line-height: 1.6">
+            <ul>
               <li>Risk mitigation through comprehensive governance</li>
               <li>Scalable architecture with enterprise integration</li>
               <li>Compliance frameworks and security protocols</li>
@@ -2027,23 +2028,14 @@
             </ul>
           </div>
 
-          <div
-            style="
-              background: white;
-              padding: 30px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            "
-          >
-            <h3 style="color: #2e86ab; margin-bottom: 15px">
-              🧠 Strategic Advisory + Handoff
-            </h3>
-            <p style="margin-bottom: 15px">
+          <div class="engagement-card">
+            <h3>🧠 Strategic Advisory + Handoff</h3>
+            <p>
               <strong>Expert Guidance Model:</strong> Architecture design,
               technology selection, and implementation roadmap with knowledge
               transfer.
             </p>
-            <ul style="color: #666; line-height: 1.6">
+            <ul>
               <li>Reduce implementation risks with proven frameworks</li>
               <li>Technology stack optimization for your environment</li>
               <li>Team training and capability building</li>
@@ -2051,22 +2043,13 @@
             </ul>
           </div>
 
-          <div
-            style="
-              background: white;
-              padding: 30px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            "
-          >
-            <h3 style="color: #2e86ab; margin-bottom: 15px">
-              👥 Team Augmentation
-            </h3>
-            <p style="margin-bottom: 15px">
+          <div class="engagement-card">
+            <h3>👥 Team Augmentation</h3>
+            <p>
               <strong>Embedded Expertise:</strong> Integrate directly with your
               team to accelerate AI initiatives and build internal capabilities.
             </p>
-            <ul style="color: #666; line-height: 1.6">
+            <ul>
               <li>Immediate access to senior AI/ML expertise</li>
               <li>Knowledge transfer and upskilling programs</li>
               <li>Flexible engagement duration and scope</li>
@@ -2098,17 +2081,9 @@
                 driving software.
               </p>
 
-              <div
-                class="project-features"
-                style="
-                  margin: 20px 0;
-                  padding: 15px;
-                  background: rgba(74, 144, 226, 0.1);
-                  border-radius: 8px;
-                "
-              >
+              <div class="project-features">
                 <strong>Key Features:</strong>
-                <ul style="margin: 10px 0 0 20px; line-height: 1.6">
+                <ul>
                   <li>
                     AI-powered and manual scenario generation across different
                     test categories
@@ -2245,17 +2220,9 @@
                 multiple countries and languages.
               </p>
 
-              <div
-                class="project-features"
-                style="
-                  margin: 20px 0;
-                  padding: 15px;
-                  background: rgba(74, 144, 226, 0.1);
-                  border-radius: 8px;
-                "
-              >
+              <div class="project-features">
                 <strong>Enterprise Scale:</strong>
-                <ul style="margin: 10px 0 0 20px; line-height: 1.6">
+                <ul>
                   <li>Millions of active users across Central Europe</li>
                   <li>
                     50+ customer service employees using the platform daily
@@ -2302,17 +2269,9 @@
                 financial operations.
               </p>
 
-              <div
-                class="project-features"
-                style="
-                  margin: 20px 0;
-                  padding: 15px;
-                  background: rgba(74, 144, 226, 0.1);
-                  border-radius: 8px;
-                "
-              >
+              <div class="project-features">
                 <strong>Enterprise Integration:</strong>
-                <ul style="margin: 10px 0 0 20px; line-height: 1.6">
+                <ul>
                   <li>60+ company kitchens across Austria integrated</li>
                   <li>
                     Complete accounting suite: monthly closures, cash books,
