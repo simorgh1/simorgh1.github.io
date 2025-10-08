@@ -708,10 +708,78 @@
         background-color: #004182 !important;
         color: #ffffff !important;
       }
+
+      .navigation-menu {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .nav-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          gap: 15px;
+        }
+
+        .nav-link {
+          padding: 8px 16px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .back-to-top {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .back-to-top-link {
+        display: inline-block;
+        color: #2e86ab;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: rgba(46, 134, 171, 0.1);
+        border: 1px solid rgba(46, 134, 171, 0.2);
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .back-to-top-link:hover {
+        background: rgba(46, 134, 171, 0.2);
+        border-color: rgba(46, 134, 171, 0.4);
+        transform: translateY(-1px);
+        color: #006994;
+      }
     </style>
   </head>
   <body>
-    <header>
+    <header id="top">
       <div class="container">
         <img
           src="https://avatars.githubusercontent.com/u/5792905?v=4"
@@ -725,12 +793,25 @@
             📍 Berlin, Germany • Dedicated AI Solutions for Your Business
           </p>
           <p class="slogan">"Think beyond the obvious"</p>
+
+          <!-- Navigation Menu -->
+          <div class="navigation-menu">
+            <div class="nav-links">
+              <a href="#services" class="nav-link">Solutions</a>
+              <a href="#projects" class="nav-link">Projects</a>
+              <a href="#experience" class="nav-link">Professional Experience</a>
+              <a href="#contact" class="nav-link">Contact</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
     <section id="about">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
           <div class="about-text">
@@ -853,6 +934,9 @@
 
     <section id="skills">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
           <div class="skill-category">
@@ -908,6 +992,9 @@
 
     <section id="experience">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">Professional Experience</h2>
         <div class="experience-timeline">
           <div class="experience-item">
@@ -1005,6 +1092,9 @@
 
     <section id="services">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">AI Solutions Portfolio</h2>
         <p
           style="
@@ -1641,6 +1731,9 @@
 
     <section id="projects">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
@@ -1912,6 +2005,9 @@
 
     <section id="education">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">Education & Certifications</h2>
         <div class="publications">
           <h3>🎓 Academic Background</h3>
@@ -1973,6 +2069,9 @@
 
     <section id="contact">
       <div class="container">
+        <div class="back-to-top">
+          <a href="#top" class="back-to-top-link">↑ Back to Top</a>
+        </div>
         <h2 class="section-title">Let's Connect</h2>
         <div class="contact-content">
           <p>
