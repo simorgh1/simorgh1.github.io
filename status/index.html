@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-N9K8YKZWBW"
+    ></script>
+    <script src="../ga.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Status Dashboard - Bahilabs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+      <div class="nav-toggle">☰ Navigation</div>
+      <div class="nav-dropdown">
+        <a href="../index.html#about" class="nav-link">👤 About</a>
+        <a href="../index.html#contact" class="nav-link">📧 Contact</a>
+        <a href="../index.html#experience" class="nav-link">📊 Experience</a>
+        <a href="../index.html" class="nav-link">🏠 Home</a>
+        <a href="../index.html#projects" class="nav-link">💼 Projects</a>
+        <a href="../index.html#services" class="nav-link">🚀 Services</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="header">
+        <h1>Project Status Dashboard</h1>
+        <p>Real-time overview of all projects and services</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number" id="totalProjects">11</div>
+          <div class="stat-label">Total Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="productionCount">6</div>
+          <div class="stat-label">Production</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="inProgressCount">3</div>
+          <div class="stat-label">In Progress</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="proposalCount">2</div>
+          <div class="stat-label">Proposed</div>
+        </div>
+      </div>
+
+      <div class="status-legend">
+        <div class="legend-item">
+          <span>Proposal</span>
+          <div class="legend-leds">
+            <div class="legend-led on"></div>
+            <div class="legend-led"></div>
+            <div class="legend-led"></div>
+            <div class="legend-led"></div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span>In Progress</span>
+          <div class="legend-leds">
+            <div class="legend-led on"></div>
+            <div class="legend-led on"></div>
+            <div class="legend-led"></div>
+            <div class="legend-led"></div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span>Review</span>
+          <div class="legend-leds">
+            <div class="legend-led on"></div>
+            <div class="legend-led on"></div>
+            <div class="legend-led on"></div>
+            <div class="legend-led"></div>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span>Production</span>
+          <div class="legend-leds">
+            <div class="legend-led on"></div>
+            <div class="legend-led on"></div>
+            <div class="legend-led on"></div>
+            <div class="legend-led on"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-board">
+        <!-- Proposal Column -->
+        <div class="status-column">
+          <div class="column-header">
+            <div class="column-title">💡 Proposal</div>
+            <div class="column-subtitle">Concept & Planning Stage</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Smart Travel Agent - AI-Powered Travel Planning
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+            </div>
+            <div class="project-type">AI/ML Service</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Social Media Backup & Analytics Platform
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+            </div>
+            <div class="project-type">SaaS Platform</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Real Estate Data Processing & Search Platform
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+            </div>
+            <div class="project-type">Data Processing Service</div>
+          </div>
+        </div>
+
+        <!-- In Progress Column -->
+        <div class="status-column">
+          <div class="column-header">
+            <div class="column-title">🔨 In Progress</div>
+            <div class="column-subtitle">Active Development</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">Location-Based Marketplace Platform</div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led"></div>
+              <div class="led"></div>
+            </div>
+            <div class="project-type">Knowledgebase Service</div>
+          </div>
+        </div>
+
+        <!-- Review Column -->
+        <div class="status-column">
+          <div class="column-header">
+            <div class="column-title">🔍 Review</div>
+            <div class="column-subtitle">Testing & Quality Assurance</div>
+          </div>
+
+          <!-- Currently no projects in review -->
+          <div class="empty-state">No projects currently in review</div>
+        </div>
+
+        <!-- Production Column -->
+        <div class="status-column">
+          <div class="column-header">
+            <div class="column-title">🚀 Production</div>
+            <div class="column-subtitle">Live & Active</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              AI Knowledge Assistant - Historical Figures
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">AI/ML Service</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Legacy Image Restoration & Enhancement
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">AI/ML Service</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Autonomous Driving Simulation Platform
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">Enterprise Platform</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Persian Jalali Calendar Chrome Extension
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">Browser Extension</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Chat Group Conversation Summarization & FAQ
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">Data Processing Service</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">
+              Enterprise Customer Support Management
+            </div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">Enterprise Platform</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-name">Enterprise ERP Platform - Eurest</div>
+            <div class="project-leds">
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+              <div class="led on"></div>
+            </div>
+            <div class="project-type">Enterprise Platform</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Auto-update statistics based on current project distribution
+      function updateStats() {
+        const columns = document.querySelectorAll(".status-column");
+        let totalProjects = 0;
+        let productionCount = 0;
+        let inProgressCount = 0;
+        let proposalCount = 0;
+        let reviewCount = 0;
+
+        columns.forEach((column, index) => {
+          const projects = column.querySelectorAll(".project-card");
+          const count = projects.length;
+          totalProjects += count;
+
+          switch (index) {
+            case 0:
+              proposalCount = count;
+              break;
+            case 1:
+              inProgressCount = count;
+              break;
+            case 2:
+              reviewCount = count;
+              break;
+            case 3:
+              productionCount = count;
+              break;
+          }
+        });
+
+        document.getElementById("totalProjects").textContent = totalProjects;
+        document.getElementById("productionCount").textContent =
+          productionCount;
+        document.getElementById("inProgressCount").textContent =
+          inProgressCount;
+        document.getElementById("proposalCount").textContent = proposalCount;
+      }
+
+      // Initialize stats on page load
+      updateStats();
+
+      // Add some interactive effects
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          const leds = this.querySelectorAll(".led.on");
+          leds.forEach((led, index) => {
+            setTimeout(() => {
+              led.style.boxShadow =
+                "0 0 20px rgba(0, 255, 136, 0.8), inset 0 2px 5px rgba(255, 255, 255, 0.4)";
+            }, index * 100);
+          });
+        });
+
+        card.addEventListener("mouseleave", function () {
+          const leds = this.querySelectorAll(".led.on");
+          leds.forEach((led) => {
+            led.style.boxShadow =
+              "0 0 15px rgba(0, 255, 136, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.3)";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

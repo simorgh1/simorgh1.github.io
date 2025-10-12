@@ -6,15 +6,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-N9K8YKZWBW"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-N9K8YKZWBW");
-    </script>
+    <script src="ga.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -94,19 +86,22 @@
           </p>
           <p class="location">📍 Berlin, Germany</p>
           <p class="slogan">"Think beyond the obvious"</p>
-
-          <!-- Navigation Menu -->
-          <div class="navigation-menu">
-            <div class="nav-links">
-              <a href="#services" class="nav-link">Solutions</a>
-              <a href="#projects" class="nav-link">Projects</a>
-              <a href="#experience" class="nav-link">Professional Experience</a>
-              <a href="#contact" class="nav-link">Contact</a>
-            </div>
-          </div>
         </div>
       </div>
     </header>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+      <div class="nav-toggle">☰ Navigation</div>
+      <div class="nav-dropdown">
+        <a href="#about" class="nav-link">👤 About</a>
+        <a href="#contact" class="nav-link">📧 Contact</a>
+        <a href="#experience" class="nav-link">📊 Experience</a>
+        <a href="#projects" class="nav-link">💼 Projects</a>
+        <a href="#services" class="nav-link">🚀 Services</a>
+        <a href="status/index.html" class="nav-link">📊 Status</a>
+      </div>
+    </nav>
 
     <section id="about">
       <div class="container">
@@ -320,7 +315,6 @@
               <h4>🎯 Business Outcomes Delivered:</h4>
               <div class="features-grid">
                 <div class="feature-item">
-                  <span class="feature-icon">�</span>
                   <span>60-80% Support Cost Reduction</span>
                 </div>
                 <div class="feature-item">
@@ -348,7 +342,6 @@
                   <span>Risk Mitigation & Audit Trails</span>
                 </div>
                 <div class="feature-item">
-                  <span class="feature-icon">�</span>
                   <span>Measurable ROI & Performance KPIs</span>
                 </div>
               </div>
@@ -452,7 +445,6 @@
               <h4>🎯 Business Outcomes:</h4>
               <div class="features-grid">
                 <div class="feature-item">
-                  <span class="feature-icon">�</span>
                   <span>70% Cost Reduction vs Manual</span>
                 </div>
                 <div class="feature-item">
@@ -464,7 +456,6 @@
                   <span>Professional Museum-Quality Results</span>
                 </div>
                 <div class="feature-item">
-                  <span class="feature-icon">�</span>
                   <span>Secure Processing & IP Protection</span>
                 </div>
                 <div class="feature-item">
@@ -726,14 +717,14 @@
               <h4>📝 Example Implementation:</h4>
 
               <div class="example-item">
-                <div class="example-status in-progress">🔨 IN PROGRESS</div>
+                <div class="example-status in-progress">� PROPOSAL</div>
                 <p>
-                  <strong>Real Estate Search Platform</strong> - Currently
-                  developing a comprehensive platform that processes real estate
-                  chat group messages to extract property details including
-                  price, size, location, descriptions, and images. The system
-                  will enable users to search properties semantically and
-                  connect directly with agents.
+                  <strong>Real Estate Search Platform</strong> - Proposed
+                  comprehensive platform that will process real estate chat
+                  group messages to extract property details including price,
+                  size, location, descriptions, and images. The system will
+                  enable users to search properties semantically and connect
+                  directly with agents.
                 </p>
 
                 <div class="example-features">
@@ -749,9 +740,9 @@
 
                 <div class="progress-note">
                   <p>
-                    <strong>Current Progress:</strong> Data preprocessing
-                    pipeline completed. Working on vector store integration and
-                    UI development.
+                    <strong>Proposal Status:</strong> System architecture
+                    designed. Ready to implement data preprocessing pipeline,
+                    vector store integration, and UI development.
                   </p>
                 </div>
               </div>

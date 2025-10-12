@@ -83,6 +83,92 @@ header {
 
 /*
 ================================================================
+NAVIGATION MENU
+================================================================
+Dropdown navigation menu with hover effects and smooth transitions.
+Fixed positioning for easy access throughout the site.
+*/
+.nav-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.nav-toggle {
+  background: rgba(46, 134, 171, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(46, 134, 171, 0.4);
+  box-shadow: 0 4px 12px rgba(46, 134, 171, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-toggle:hover {
+  background: #006994;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46, 134, 171, 0.4);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+.nav-menu:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown .nav-link {
+  display: block;
+  padding: 15px 20px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown .nav-link:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown .nav-link:hover {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00cc6a;
+  padding-left: 25px;
+}
+
+.nav-dropdown .nav-link:first-child {
+  border-radius: 15px 15px 0 0;
+}
+
+.nav-dropdown .nav-link:last-child {
+  border-radius: 0 0 15px 15px;
+}
+
+/*
+================================================================
 SECTIONS & LAYOUT
 ================================================================
 General section styling with alternating backgrounds and
@@ -674,6 +760,18 @@ footer {
     gap: 20px;
   }
 
+  .nav-dropdown {
+    left: 0;
+    right: auto;
+    transform-origin: top left;
+    min-width: 200px;
+  }
+
+  .nav-toggle {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
   .experience-timeline::before {
     left: 20px;
   }
@@ -746,56 +844,6 @@ footer {
 .libutton:hover {
   background-color: #004182 !important;
   color: #ffffff !important;
-}
-
-/*
-================================================================
-NAVIGATION MENU
-================================================================
-Header navigation with pill-style buttons linking to main sections.
-Uses glassmorphism effect with hover animations.
-*/
-.navigation-menu {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 15px;
-  }
-
-  .nav-link {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
 }
 
 .back-to-top {
