@@ -355,6 +355,29 @@ body {
   }
 }
 
+/* Project Card Links */
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.project-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-link .project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card-link:hover .project-card {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
 /* Footer Styles */
 footer {
   background: #2c3e50;
