@@ -11,7 +11,7 @@
 <header>
     <div class="content">
         <h1>Coverage report:
-            <span class="pc_cov">86%</span>
+            <span class="pc_cov">85%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -27,6 +27,8 @@
                         <kbd>s</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
+                        <kbd>b</kbd>
+                        <kbd>p</kbd>
                         <kbd>c</kbd>
                         &nbsp; change column sorting
                     </p>
@@ -55,7 +57,7 @@
         </h2>
         <p class="text">
             <a class="nav" href="https://coverage.readthedocs.io/en/7.11.0">coverage.py v7.11.0</a>,
-            created at 2025-10-25 09:41 +0000
+            created at 2025-10-25 18:20 +0000
         </p>
     </div>
 </header>
@@ -68,6 +70,8 @@
                 <th id="statements" aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements<span class="arrows"></span></th>
                 <th id="missing" aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing<span class="arrows"></span></th>
                 <th id="excluded" aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded<span class="arrows"></span></th>
+                <th id="branches" aria-sort="none" data-default-sort-order="descending" data-shortcut="b">branches<span class="arrows"></span></th>
+                <th id="partial" aria-sort="none" data-default-sort-order="descending" data-shortcut="p">partial<span class="arrows"></span></th>
                 <th id="coverage" class="right" aria-sort="none" data-shortcut="c">coverage<span class="arrows"></span></th>
             </tr>
         </thead>
@@ -78,11 +82,15 @@
                 <td>1</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="1 1">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_eb94cc2d1e45e68a___init___py.html">mp/data/__init__.py</a></td>
                 <td class="name left"><a href="z_eb94cc2d1e45e68a___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -92,9 +100,11 @@
                 <td class="name left"><a href="z_eb94cc2d1e45e68a_database_py.html">mp/data/database.py</a></td>
                 <td class="name left"><a href="z_eb94cc2d1e45e68a_database_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>30</td>
-                <td>13</td>
+                <td>17</td>
                 <td>0</td>
-                <td class="right" data-ratio="17 30">57%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="14 32">44%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2___init___py.html">mp/data/models/__init__.py</a></td>
@@ -102,7 +112,99 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t11">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t11"><data value='FrontpageContentBase'>FrontpageContentBase</data></a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t53">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t53"><data value='FrontpageContentCreate'>FrontpageContentCreate</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t59">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t59"><data value='FrontpageContentUpdate'>FrontpageContentUpdate</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t68">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t68"><data value='FrontpageContentPublic'>FrontpageContentPublic</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t78">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t78"><data value='FAQBase'>FAQBase</data></a></td>
+                <td>13</td>
+                <td>1</td>
+                <td>0</td>
+                <td>10</td>
+                <td>1</td>
+                <td class="right" data-ratio="21 23">91%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t115">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t115"><data value='FAQCreate'>FAQCreate</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t121">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t121"><data value='FAQUpdate'>FAQUpdate</data></a></td>
+                <td>15</td>
+                <td>4</td>
+                <td>0</td>
+                <td>14</td>
+                <td>6</td>
+                <td class="right" data-ratio="19 29">66%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t163">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html#t163"><data value='FAQPublic'>FAQPublic</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html">mp/data/models/api_frontpage_models.py</a></td>
+                <td class="name left"><a href="z_2704004313f161b2_api_frontpage_models_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>62</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="62 62">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t11">mp/data/models/api_models.py</a></td>
@@ -110,7 +212,9 @@
                 <td>3</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="3 3">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t26">mp/data/models/api_models.py</a></td>
@@ -118,11 +222,15 @@
                 <td>6</td>
                 <td>2</td>
                 <td>0</td>
-                <td class="right" data-ratio="4 6">67%</td>
+                <td>4</td>
+                <td>2</td>
+                <td class="right" data-ratio="6 10">60%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t64">mp/data/models/api_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t64"><data value='UserCreate'>UserCreate</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -134,11 +242,15 @@
                 <td>3</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="3 3">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t112">mp/data/models/api_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t112"><data value='UserResponse'>UserResponse</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -150,11 +262,15 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t133">mp/data/models/api_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t133"><data value='EmailVerificationResponse'>EmailVerificationResponse</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -166,11 +282,15 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t148">mp/data/models/api_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t148"><data value='WebsiteVerificationResponse'>WebsiteVerificationResponse</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -182,11 +302,15 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t166">mp/data/models/api_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t166"><data value='ProductCreate'>ProductCreate</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -198,11 +322,15 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t181">mp/data/models/api_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_models_py.html#t181"><data value='ProductResponse'>ProductResponse</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -214,6 +342,8 @@
                 <td>80</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="80 80">100%</td>
             </tr>
             <tr class="region">
@@ -222,7 +352,9 @@
                 <td>4</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="3 4">75%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="4 6">67%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t41">mp/data/models/api_offer_models.py</a></td>
@@ -230,12 +362,16 @@
                 <td>4</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="3 4">75%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="4 6">67%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t73">mp/data/models/api_offer_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t73"><data value='OfferPublic'>OfferPublic</data></a></td>
                 <td>1</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="1 1">100%</td>
@@ -246,7 +382,9 @@
                 <td>4</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="3 4">75%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="4 6">67%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t128">mp/data/models/api_offer_models.py</a></td>
@@ -254,12 +392,16 @@
                 <td>3</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="2 3">67%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="3 5">60%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t148">mp/data/models/api_offer_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t148"><data value='BookingPublic'>BookingPublic</data></a></td>
                 <td>2</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="2 2">100%</td>
@@ -270,11 +412,15 @@
                 <td>3</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="2 3">67%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="3 5">60%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t200">mp/data/models/api_offer_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_offer_models_py.html#t200"><data value='MessagePublic'>MessagePublic</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -286,6 +432,8 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
@@ -294,11 +442,15 @@
                 <td>115</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="115 115">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t8">mp/data/models/api_provider_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t8"><data value='ServiceArea'>ServiceArea</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -310,7 +462,9 @@
                 <td>3</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="3 3">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t43">mp/data/models/api_provider_models.py</a></td>
@@ -318,11 +472,15 @@
                 <td>3</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="2 3">67%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="3 5">60%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t68">mp/data/models/api_provider_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t68"><data value='ProviderPublic'>ProviderPublic</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -334,11 +492,15 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t102">mp/data/models/api_provider_models.py</a></td>
                 <td class="name left"><a href="z_2704004313f161b2_api_provider_models_py.html#t102"><data value='ProviderSearchParams'>ProviderSearchParams</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -350,6 +512,8 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
@@ -358,11 +522,15 @@
                 <td>62</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="62 62">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_booking_py.html#t22">mp/data/models/db/booking.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_booking_py.html#t22"><data value='BookingStatus'>BookingStatus</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -374,6 +542,8 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
@@ -382,11 +552,15 @@
                 <td>31</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="31 31">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_booking_message_py.html#t11">mp/data/models/db/booking_message.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_booking_message_py.html#t11"><data value='BookingMessage'>BookingMessage</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -398,6 +572,8 @@
                 <td>12</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="12 12">100%</td>
             </tr>
             <tr class="region">
@@ -406,12 +582,16 @@
                 <td>1</td>
                 <td>1</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 1">0%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_industry_py.html">mp/data/models/db/industry.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_industry_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>9</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="9 9">100%</td>
@@ -422,6 +602,8 @@
                 <td>1</td>
                 <td>1</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 1">0%</td>
             </tr>
             <tr class="region">
@@ -430,11 +612,55 @@
                 <td>13</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_faq_py.html#t11">mp/data/models/db/provider_faq.py</a></td>
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_faq_py.html#t11"><data value='ProviderFAQ'>ProviderFAQ</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_faq_py.html">mp/data/models/db/provider_faq.py</a></td>
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_faq_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>15</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 15">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_frontpage_content_py.html#t9">mp/data/models/db/provider_frontpage_content.py</a></td>
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_frontpage_content_py.html#t9"><data value='ProviderFrontpageContent'>ProviderFrontpageContent</data></a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_frontpage_content_py.html">mp/data/models/db/provider_frontpage_content.py</a></td>
+                <td class="name left"><a href="z_4d72f8e7b717cbf2_provider_frontpage_content_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>19</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 19">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_service_offer_py.html#t23">mp/data/models/db/service_offer.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_service_offer_py.html#t23"><data value='Currency'>Currency</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -446,11 +672,15 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_service_offer_py.html#t40">mp/data/models/db/service_offer.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_service_offer_py.html#t40"><data value='OfferStatus'>OfferStatus</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -462,6 +692,8 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
@@ -470,11 +702,15 @@
                 <td>39</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="39 39">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_service_provider_py.html#t22">mp/data/models/db/service_provider.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_service_provider_py.html#t22"><data value='ProfileStatus'>ProfileStatus</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -486,6 +722,8 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
@@ -494,11 +732,15 @@
                 <td>35</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="35 35">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_system_settings_py.html#t9">mp/data/models/db/system_settings.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_system_settings_py.html#t9"><data value='SystemSettings'>SystemSettings</data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -510,6 +752,8 @@
                 <td>12</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="12 12">100%</td>
             </tr>
             <tr class="region">
@@ -518,12 +762,16 @@
                 <td>4</td>
                 <td>2</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="2 4">50%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_user_py.html">mp/data/models/db/user.py</a></td>
                 <td class="name left"><a href="z_4d72f8e7b717cbf2_user_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>28</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="28 28">100%</td>
@@ -534,12 +782,16 @@
                 <td>24</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="24 24">100%</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="34 34">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_exceptions_py.html#t15">mp/exceptions.py</a></td>
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_exceptions_py.html#t15"><data value='BusinessLogicException'>BusinessLogicException</data></a></td>
                 <td>3</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="3 3">100%</td>
@@ -550,7 +802,9 @@
                 <td>36</td>
                 <td>2</td>
                 <td>0</td>
-                <td class="right" data-ratio="34 36">94%</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="40 42">95%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_logger_py.html">mp/logger.py</a></td>
@@ -558,27 +812,35 @@
                 <td>11</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="11 11">100%</td>
             </tr>
             <tr class="region">
-                <td class="name left"><a href="z_9e0c06d9b1ce6e12_main_py.html#t47">mp/main.py</a></td>
-                <td class="name left"><a href="z_9e0c06d9b1ce6e12_main_py.html#t47"><data value='DecimalEncoder'>DecimalEncoder</data></a></td>
+                <td class="name left"><a href="z_9e0c06d9b1ce6e12_main_py.html#t53">mp/main.py</a></td>
+                <td class="name left"><a href="z_9e0c06d9b1ce6e12_main_py.html#t53"><data value='DecimalEncoder'>DecimalEncoder</data></a></td>
                 <td>3</td>
                 <td>3</td>
                 <td>0</td>
-                <td class="right" data-ratio="0 3">0%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 5">0%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_main_py.html">mp/main.py</a></td>
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_main_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>45</td>
+                <td>46</td>
                 <td>14</td>
                 <td>0</td>
-                <td class="right" data-ratio="31 45">69%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="33 48">69%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_3789c8a96a40e019___init___py.html">mp/rest/__init__.py</a></td>
                 <td class="name left"><a href="z_3789c8a96a40e019___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -590,23 +852,39 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_aa6f6aeeb021ce79_bookings_py.html">mp/rest/endpoints/bookings.py</a></td>
                 <td class="name left"><a href="z_aa6f6aeeb021ce79_bookings_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>110</td>
-                <td>43</td>
+                <td>37</td>
                 <td>0</td>
-                <td class="right" data-ratio="67 110">61%</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="73 122">60%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_aa6f6aeeb021ce79_offers_py.html">mp/rest/endpoints/offers.py</a></td>
                 <td class="name left"><a href="z_aa6f6aeeb021ce79_offers_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>93</td>
-                <td>30</td>
+                <td>27</td>
                 <td>0</td>
-                <td class="right" data-ratio="63 93">68%</td>
+                <td>14</td>
+                <td>3</td>
+                <td class="right" data-ratio="71 107">66%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_aa6f6aeeb021ce79_provider_frontpage_py.html">mp/rest/endpoints/provider_frontpage.py</a></td>
+                <td class="name left"><a href="z_aa6f6aeeb021ce79_provider_frontpage_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>86</td>
+                <td>21</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="65 98">66%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_aa6f6aeeb021ce79_service_providers_py.html">mp/rest/endpoints/service_providers.py</a></td>
@@ -614,7 +892,9 @@
                 <td>97</td>
                 <td>34</td>
                 <td>0</td>
-                <td class="right" data-ratio="63 97">65%</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="65 109">60%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_aa6f6aeeb021ce79_users_py.html">mp/rest/endpoints/users.py</a></td>
@@ -622,11 +902,15 @@
                 <td>71</td>
                 <td>16</td>
                 <td>0</td>
-                <td class="right" data-ratio="55 71">77%</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="55 81">68%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f___init___py.html">mp/services/__init__.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -636,14 +920,18 @@
                 <td class="name left"><a href="z_ad218cb02cd2550f_booking_service_py.html#t26">mp/services/booking_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_booking_service_py.html#t26"><data value='BookingService'>BookingService</data></a></td>
                 <td>146</td>
-                <td>22</td>
+                <td>19</td>
                 <td>0</td>
-                <td class="right" data-ratio="124 146">85%</td>
+                <td>78</td>
+                <td>8</td>
+                <td class="right" data-ratio="189 224">84%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_booking_service_py.html">mp/services/booking_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_booking_service_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>37</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="37 37">100%</td>
@@ -654,6 +942,8 @@
                 <td>1</td>
                 <td>1</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="0 1">0%</td>
             </tr>
             <tr class="region">
@@ -662,7 +952,9 @@
                 <td>20</td>
                 <td>16</td>
                 <td>0</td>
-                <td class="right" data-ratio="4 20">20%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 22">18%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_email_service_py.html#t96">mp/services/email_service.py</a></td>
@@ -670,7 +962,9 @@
                 <td>8</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="8 8">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 10">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_email_service_py.html#t128">mp/services/email_service.py</a></td>
@@ -678,7 +972,9 @@
                 <td>10</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="10 10">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 14">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_email_service_py.html">mp/services/email_service.py</a></td>
@@ -686,20 +982,66 @@
                 <td>23</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="23 23">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 25">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_ad218cb02cd2550f_faq_service_py.html#t21">mp/services/faq_service.py</a></td>
+                <td class="name left"><a href="z_ad218cb02cd2550f_faq_service_py.html#t21"><data value='FAQService'>FAQService</data></a></td>
+                <td>50</td>
+                <td>0</td>
+                <td>0</td>
+                <td>20</td>
+                <td>4</td>
+                <td class="right" data-ratio="66 70">94%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_ad218cb02cd2550f_faq_service_py.html">mp/services/faq_service.py</a></td>
+                <td class="name left"><a href="z_ad218cb02cd2550f_faq_service_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>18</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 18">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_ad218cb02cd2550f_frontpage_content_service_py.html#t20">mp/services/frontpage_content_service.py</a></td>
+                <td class="name left"><a href="z_ad218cb02cd2550f_frontpage_content_service_py.html#t20"><data value='FrontpageContentService'>FrontpageContentService</data></a></td>
+                <td>46</td>
+                <td>0</td>
+                <td>0</td>
+                <td>16</td>
+                <td>0</td>
+                <td class="right" data-ratio="62 62">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name left"><a href="z_ad218cb02cd2550f_frontpage_content_service_py.html">mp/services/frontpage_content_service.py</a></td>
+                <td class="name left"><a href="z_ad218cb02cd2550f_frontpage_content_service_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 13">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_message_service_py.html#t22">mp/services/message_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_message_service_py.html#t22"><data value='MessageService'>MessageService</data></a></td>
                 <td>37</td>
-                <td>8</td>
+                <td>6</td>
                 <td>0</td>
-                <td class="right" data-ratio="29 37">78%</td>
+                <td>12</td>
+                <td>4</td>
+                <td class="right" data-ratio="37 49">76%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_message_service_py.html">mp/services/message_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_message_service_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>16</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="16 16">100%</td>
@@ -708,14 +1050,18 @@
                 <td class="name left"><a href="z_ad218cb02cd2550f_offer_service_py.html#t30">mp/services/offer_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_offer_service_py.html#t30"><data value='OfferService'>OfferService</data></a></td>
                 <td>135</td>
-                <td>26</td>
+                <td>23</td>
                 <td>0</td>
-                <td class="right" data-ratio="109 135">81%</td>
+                <td>60</td>
+                <td>6</td>
+                <td class="right" data-ratio="156 195">80%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_offer_service_py.html">mp/services/offer_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_offer_service_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>32</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="32 32">100%</td>
@@ -726,12 +1072,16 @@
                 <td>137</td>
                 <td>16</td>
                 <td>0</td>
-                <td class="right" data-ratio="121 137">88%</td>
+                <td>62</td>
+                <td>12</td>
+                <td class="right" data-ratio="171 199">86%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_service_provider_service_py.html">mp/services/service_provider_service.py</a></td>
                 <td class="name left"><a href="z_ad218cb02cd2550f_service_provider_service_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
                 <td>25</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="25 25">100%</td>
@@ -742,7 +1092,9 @@
                 <td>120</td>
                 <td>9</td>
                 <td>0</td>
-                <td class="right" data-ratio="111 120">92%</td>
+                <td>56</td>
+                <td>11</td>
+                <td class="right" data-ratio="156 176">89%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_ad218cb02cd2550f_user_service_py.html">mp/services/user_service.py</a></td>
@@ -750,15 +1102,19 @@
                 <td>25</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td class="right" data-ratio="25 25">100%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_validators_py.html">mp/validators.py</a></td>
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_validators_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>179</td>
+                <td>197</td>
                 <td>5</td>
                 <td>0</td>
-                <td class="right" data-ratio="174 179">97%</td>
+                <td>130</td>
+                <td>3</td>
+                <td class="right" data-ratio="319 327">98%</td>
             </tr>
             <tr class="region">
                 <td class="name left"><a href="z_9e0c06d9b1ce6e12_version_py.html">mp/version.py</a></td>
@@ -766,17 +1122,21 @@
                 <td>28</td>
                 <td>1</td>
                 <td>0</td>
-                <td class="right" data-ratio="27 28">96%</td>
+                <td>8</td>
+                <td>2</td>
+                <td class="right" data-ratio="33 36">92%</td>
             </tr>
         </tbody>
         <tfoot>
             <tr class="total">
                 <td class="name left">Total</td>
                 <td class="name left">&nbsp;</td>
-                <td>1984</td>
-                <td>271</td>
+                <td>2343</td>
+                <td>284</td>
                 <td>0</td>
-                <td class="right" data-ratio="1713 1984">86%</td>
+                <td>582</td>
+                <td>70</td>
+                <td class="right" data-ratio="2497 2925">85%</td>
             </tr>
         </tfoot>
     </table>
@@ -788,7 +1148,7 @@
     <div class="content">
         <p>
             <a class="nav" href="https://coverage.readthedocs.io/en/7.11.0">coverage.py v7.11.0</a>,
-            created at 2025-10-25 09:41 +0000
+            created at 2025-10-25 18:20 +0000
         </p>
     </div>
     <aside class="hidden">

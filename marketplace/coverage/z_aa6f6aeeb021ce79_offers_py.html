@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mp/rest/endpoints/offers.py: 68%</title>
+    <title>Coverage for mp/rest/endpoints/offers.py: 66%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_6b508a39.css" type="text/css">
     <script src="coverage_html_cb_6fb7b396.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mp/rest/endpoints/offers.py</b>:
-            <span class="pc_cov">68%</span>
+            <span class="pc_cov">66%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -26,6 +26,7 @@
                         <kbd>r</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
+                        <kbd>p</kbd>
                         &nbsp; toggle line displays
                     </p>
                     <p>
@@ -55,17 +56,18 @@
         </aside>
         <h2>
             <span class="text">93 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">63<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">30<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">66<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">27<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">3<span class="text"> partial</span></button>
         </h2>
         <p class="text">
             <a id="prevFileLink" class="nav" href="z_aa6f6aeeb021ce79_bookings_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="z_aa6f6aeeb021ce79_service_providers_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="z_aa6f6aeeb021ce79_provider_frontpage_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.11.0">coverage.py v7.11.0</a>,
-            created at 2025-10-25 09:41 +0000
+            created at 2025-10-25 18:20 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -149,7 +151,7 @@
     <p class="pln"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t">    <span class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">        <span class="nam">offer</span> <span class="op">=</span> <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">create_offer</span><span class="op">(</span><span class="nam">uuid</span><span class="op">.</span><span class="nam">UUID</span><span class="op">(</span><span class="nam">provider_id</span><span class="op">)</span><span class="op">,</span> <span class="nam">data</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">        <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">        <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">        <span class="key">return</span> <span class="nam">OfferPublic</span><span class="op">.</span><span class="nam">model_validate</span><span class="op">(</span><span class="nam">offer</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">    <span class="key">except</span> <span class="nam">BusinessLogicException</span> <span class="key">as</span> <span class="nam">e</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -212,7 +214,7 @@
     <p class="run run2"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t"><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">    <span class="str">"""Update a service offer (provider must own the offer)"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">    <span class="nam">provider_id</span> <span class="op">=</span> <span class="nam">current_provider</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"provider_id"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">provider_id</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">provider_id</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">133&#x202F;&#x219B;&#x202F;134</span><span class="annotate long">line 133 didn't jump to line 134 because the condition on line 133 was never true</span></span></p>
     <p class="mis show_mis"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">        <span class="key">raise</span> <span class="nam">HTTPException</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">            <span class="nam">status_code</span><span class="op">=</span><span class="nam">status</span><span class="op">.</span><span class="nam">HTTP_403_FORBIDDEN</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">            <span class="nam">detail</span><span class="op">=</span><span class="str">"You must have a provider account to update offers"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -233,7 +235,7 @@
     <p class="mis mis2 show_mis"><span class="n"><a id="t151" href="#t151">151</a></span><span class="t">                <span class="nam">status_code</span><span class="op">=</span><span class="nam">status</span><span class="op">.</span><span class="nam">HTTP_404_NOT_FOUND</span><span class="op">,</span> <span class="nam">detail</span><span class="op">=</span><span class="str">"Offer not found"</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t152" href="#t152">152</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t153" href="#t153">153</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t154" href="#t154">154</a></span><span class="t">        <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t154" href="#t154">154</a></span><span class="t">        <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t155" href="#t155">155</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t156" href="#t156">156</a></span><span class="t">        <span class="key">return</span> <span class="nam">OfferPublic</span><span class="op">.</span><span class="nam">model_validate</span><span class="op">(</span><span class="nam">offer</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t157" href="#t157">157</a></span><span class="t">    <span class="key">except</span> <span class="nam">HTTPException</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -250,7 +252,7 @@
     <p class="run run2"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t"><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">    <span class="str">"""Delete (archive) a service offer"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">    <span class="nam">provider_id</span> <span class="op">=</span> <span class="nam">current_provider</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"provider_id"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">provider_id</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">provider_id</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">171&#x202F;&#x219B;&#x202F;172</span><span class="annotate long">line 171 didn't jump to line 172 because the condition on line 171 was never true</span></span></p>
     <p class="mis show_mis"><span class="n"><a id="t172" href="#t172">172</a></span><span class="t">        <span class="key">raise</span> <span class="nam">HTTPException</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t173" href="#t173">173</a></span><span class="t">            <span class="nam">status_code</span><span class="op">=</span><span class="nam">status</span><span class="op">.</span><span class="nam">HTTP_403_FORBIDDEN</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t">            <span class="nam">detail</span><span class="op">=</span><span class="str">"You must have a provider account to delete offers"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -271,7 +273,7 @@
     <p class="mis mis2 show_mis"><span class="n"><a id="t189" href="#t189">189</a></span><span class="t">                <span class="nam">status_code</span><span class="op">=</span><span class="nam">status</span><span class="op">.</span><span class="nam">HTTP_404_NOT_FOUND</span><span class="op">,</span> <span class="nam">detail</span><span class="op">=</span><span class="str">"Offer not found"</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t190" href="#t190">190</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t191" href="#t191">191</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t192" href="#t192">192</a></span><span class="t">        <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t192" href="#t192">192</a></span><span class="t">        <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t193" href="#t193">193</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t194" href="#t194">194</a></span><span class="t">        <span class="key">return</span> <span class="op">{</span><span class="str">"message"</span><span class="op">:</span> <span class="str">"Offer archived successfully"</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t195" href="#t195">195</a></span><span class="t">    <span class="key">except</span> <span class="nam">HTTPException</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -302,7 +304,7 @@
     <p class="run run2"><span class="n"><a id="t220" href="#t220">220</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t221" href="#t221">221</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t222" href="#t222">222</a></span><span class="t">    <span class="com"># Only allow draft inclusion if user owns the provider</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t223" href="#t223">223</a></span><span class="t">    <span class="key">if</span> <span class="nam">include_drafts</span> <span class="key">and</span> <span class="nam">current_provider</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"provider_id"</span><span class="op">)</span> <span class="op">!=</span> <span class="nam">provider_id</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a id="t223" href="#t223">223</a></span><span class="t">    <span class="key">if</span> <span class="nam">include_drafts</span> <span class="key">and</span> <span class="nam">current_provider</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"provider_id"</span><span class="op">)</span> <span class="op">!=</span> <span class="nam">provider_id</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">223&#x202F;&#x219B;&#x202F;224</span><span class="annotate long">line 223 didn't jump to line 224 because the condition on line 223 was never true</span></span></p>
     <p class="mis show_mis"><span class="n"><a id="t224" href="#t224">224</a></span><span class="t">        <span class="nam">include_drafts</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t225" href="#t225">225</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t226" href="#t226">226</a></span><span class="t">    <span class="nam">offers</span> <span class="op">=</span> <span class="key">await</span> <span class="nam">service</span><span class="op">.</span><span class="nam">get_offers_by_provider</span><span class="op">(</span><span class="nam">provider_uuid</span><span class="op">,</span> <span class="nam">include_drafts</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -314,10 +316,10 @@
         <p>
             <a class="nav" href="z_aa6f6aeeb021ce79_bookings_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a class="nav" href="z_aa6f6aeeb021ce79_service_providers_py.html">&#xbb; next</a>
+            <a class="nav" href="z_aa6f6aeeb021ce79_provider_frontpage_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.11.0">coverage.py v7.11.0</a>,
-            created at 2025-10-25 09:41 +0000
+            created at 2025-10-25 18:20 +0000
         </p>
     </div>
 </footer>
